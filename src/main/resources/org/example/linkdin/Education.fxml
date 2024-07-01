@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="back" alignment="CENTER" layoutX="41.0" layoutY="37.0" mnemonicParsing="false" text="Back" textFill="#1a00ff" />
+      <Label alignment="CENTER" layoutX="589.0" layoutY="73.0" text="Name of academy :" textFill="#1a00ff" />
+      <TextField fx:id="academy" alignment="CENTER" layoutX="471.0" layoutY="107.0" prefHeight="26.0" prefWidth="334.0" promptText="academy" />
+      <Label layoutX="590.0" layoutY="157.0" text="Field of Education :" textFill="#1a00ff" />
+      <TextField fx:id="field" alignment="CENTER" layoutX="474.0" layoutY="195.0" prefHeight="26.0" prefWidth="334.0" promptText="Field of Education" />
+      <Label alignment="CENTER" layoutX="585.0" layoutY="245.0" prefHeight="18.0" prefWidth="110.0" text="Starting Education :" textFill="#1a00ff" />
+      <DatePicker fx:id="StartEdu" layoutX="552.0" layoutY="282.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="284.0" layoutY="304.0" />
+      <Label fx:id="finishEdu" alignment="CENTER" layoutX="560.0" layoutY="338.0" prefHeight="18.0" prefWidth="158.0" text="Finished Education :" textFill="#1a00ff" />
+      <DatePicker layoutX="552.0" layoutY="377.0" />
+      <Label layoutX="621.0" layoutY="431.0" text="Grade :" textFill="#1a00ff" />
+      <TextField fx:id="Grade" alignment="CENTER" layoutX="594.0" layoutY="466.0" prefHeight="26.0" prefWidth="89.0" promptText="Grade" />
+      <Label fx:id="Activities" layoutX="613.0" layoutY="512.0" text="Activities :" textFill="#1a00ff" />
+      <TextArea layoutX="471.0" layoutY="536.0" prefHeight="102.0" prefWidth="334.0" />
+      <Button fx:id="next" layoutX="621.0" layoutY="660.0" mnemonicParsing="false" text="Next" textFill="#1a00ff" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+package controller;
+
+import controller.Connection2;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import model.User;
+import javafx.fxml.FXML;
+
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+
+public class Connections {
+    private User user;
+    @FXML
+    private Button back;
+
+    @FXML
+    private Label configurationLink;
+
+    @FXML
+    private TextField link;
+
+    @FXML
+    private Label emailLabel;
+
+    @FXML
+    private TextField Email;
+
+    @FXML
+    private Label phoneNumberLabel;
+
+    @FXML
+    private TextField PhoneNum;
+    @FXML
+    private ComboBox Phonetype;
+
+    @FXML
+    private TextArea Address;
+
+    @FXML
+    private DatePicker DateOfBirth;
+    @FXML
+    private Button next;
+
+    @FXML
+    private void initialize() {
+        Phonetype.getItems().addAll("Cellular phone" , "Home phone" , "Landline phone");
+        Email.setText(user.getEmail());
+    }
+
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
+            AnchorPane ConnectionPage = loader.load();
+            Connection2 Connection2Controller = loader.getController();
+             Connection2Controller.initData(user);
+            Stage stage = (Stage) back.getScene().getWindow();
+            Scene scene = new Scene(ConnectionPage);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleNextButtonAction(ActionEvent event) {
+        if (Address.getText().length() > 220){
+            Address.setStyle("-fx-border-color: red;");
+            return ;
+        }
+        if (configurationLink.getText().length() > 40){
+            configurationLink.setStyle("-fx-border-color: red;");
+            return ;
+        }
+        if (PhoneNum.getText().length() > 40){
+            PhoneNum.setStyle("-fx-border-color: red;");
+            return ;
+        }
+        setUser(user);
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Connection2.fxml"));
+            AnchorPane ConnectionPage = loader.load();
+            Stage stage = (Stage) next.getScene().getWindow();
+            Scene scene = new Scene(ConnectionPage);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+        configurationLink.setText(user.getConnection().getConfigurationLink());
+        PhoneNum.setText(user.getConnection().getPhoneNum());
+        Phonetype.setItems(user.getConnection().getPhoneType());
+        Address.setText(user.getConnection().getAddress());
+        DateOfBirth.setValue(user.getConnection().getBirth());
+    }
+}
