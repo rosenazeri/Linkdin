@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
    <children>
       <TextField fx:id="firstName" alignment="CENTER" layoutX="524.0" layoutY="105.0" prefHeight="26.0" prefWidth="231.0" promptText="First Name" />
       <TextField fx:id="lastName" alignment="CENTER" layoutX="524.0" layoutY="185.0" prefHeight="26.0" prefWidth="231.0" promptText="Last Name" />
@@ -16,7 +16,7 @@
       <Label alignment="CENTER" layoutX="591.0" layoutY="150.0" prefHeight="18.0" prefWidth="98.0" text="Last Name :" textFill="#1a00ff" />
       <Label alignment="CENTER" layoutX="619.0" layoutY="233.0" prefHeight="18.0" prefWidth="42.0" text="Email :" textFill="#1a00ff" />
       <Label alignment="CENTER" layoutX="582.0" layoutY="413.0" prefHeight="18.0" prefWidth="114.0" text="repeat password :" textFill="#1a00ff" />
-      <Button fx:id="done" layoutX="596.0" layoutY="523.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Done" textFill="#1a00ff" />
+      <Button fx:id="done" layoutX="596.0" layoutY="523.0" mnemonicParsing="false" onAction="#handleDone" prefHeight="26.0" prefWidth="88.0" text="Done" textFill="#1a00ff" />
       <PasswordField fx:id="password" alignment="CENTER" layoutX="524.0" layoutY="359.0" prefHeight="26.0" prefWidth="231.0" promptText="password" />
       <PasswordField fx:id="password2" alignment="CENTER" layoutX="523.0" layoutY="450.0" prefHeight="26.0" prefWidth="231.0" promptText="password" />
    </children>

@@ -48,7 +48,7 @@ public class CertainJob2 {
     }
 
     @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+    private void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainJob.fxml"));
             AnchorPane CertainJob2Page = loader.load();
@@ -62,7 +62,7 @@ public class CertainJob2 {
     }
 
     @FXML
-    private void handleDoneButtonAction(ActionEvent event) {
+    private void handleDoneButtonAction(javafx.event.ActionEvent actionEvent) {
         if (Explanation.getText().length() > 1000){
             Explanation.setStyle("-fx-border-color: red;");
             return ;

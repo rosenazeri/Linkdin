@@ -28,7 +28,7 @@ public class WelcomePage extends Parent {
     }
 
     @FXML
-    private void handleSignInAction(ActionEvent event) {
+    private void handleSignInAction(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("sign-in.fxml"));
             AnchorPane signInPage = loader.load();
@@ -42,7 +42,7 @@ public class WelcomePage extends Parent {
     }
 
     @FXML
-    private void handleSignUpAction(ActionEvent event) {
+    private void handleSignUpAction(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("sign-up.fxml"));
             AnchorPane signUpPage = loader.load();
@@ -59,4 +59,5 @@ public class WelcomePage extends Parent {
     public Node getStyleableNode() {
         return super.getStyleableNode();
     }
+
 }

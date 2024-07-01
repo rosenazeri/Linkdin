@@ -52,7 +52,7 @@ public class Connections {
     }
 
     @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+    private void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
             AnchorPane ConnectionPage = loader.load();
@@ -68,7 +68,7 @@ public class Connections {
     }
 
     @FXML
-    private void handleNextButtonAction(ActionEvent event) {
+    private void handleNextButtonAction(javafx.event.ActionEvent actionEvent) {
         if (Address.getText().length() > 220){
             Address.setStyle("-fx-border-color: red;");
             return ;

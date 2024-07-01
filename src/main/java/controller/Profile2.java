@@ -40,6 +40,7 @@ public class Profile2 {
     private Button educationButton;
     @FXML
     private Button connectionButton;
+    @FXML
     private ImageView background ;
     @FXML
     private Label Biography ;
@@ -68,7 +69,7 @@ public class Profile2 {
         // Initialization code goes here
     }
     @FXML
-    private void backButtonClicked(ActionEvent event) {
+    private void backButtonClicked(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
             AnchorPane Profile2Page = loader.load();
@@ -80,6 +81,7 @@ public class Profile2 {
             e.printStackTrace();
         }
     }
+    @FXML
     private void AddBackground(ActionEvent event) {
         // Code to handle the add background button click event
     }
@@ -135,7 +137,8 @@ public class Profile2 {
             e.printStackTrace();
         }
     }
-    private void certainJobButtonClicked(ActionEvent event) {
+    @FXML
+    private void certainJobButtonClicked(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainJob.fxml"));
             AnchorPane Profile2Page = loader.load();
@@ -150,7 +153,7 @@ public class Profile2 {
         }
     }
     @FXML
-    private void educationButtonClicked(ActionEvent event) {
+    private void educationButtonClicked(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Education.fxml"));
             AnchorPane Profile2Page = loader.load();

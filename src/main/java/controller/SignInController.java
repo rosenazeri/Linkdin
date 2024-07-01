@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -10,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class SignInController {
@@ -24,7 +24,7 @@ public class SignInController {
         // Initialization code goes here
     }
     @FXML
-    private void handleSignInAction(ActionEvent event) {
+    private void handleSignInAction(javafx.event.ActionEvent actionEvent) {
         String email = emailField.getText();
         String password = passwordField.getText();
         User newUser = null;

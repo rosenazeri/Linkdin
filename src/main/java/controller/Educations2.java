@@ -47,7 +47,7 @@ public class Educations2 {
         // Initialization code goes here
     }
     @FXML
-    private void handleDoneButtonAction(ActionEvent event) {
+    private void handleDoneButtonAction(javafx.event.ActionEvent actionEvent) {
         if (ExtraExplanation.getText().length() > 1000){
             ExtraExplanation.setStyle("-fx-border-color: red;");
             return ;
@@ -88,7 +88,7 @@ public class Educations2 {
     }
 
     @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+    private void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Education.fxml"));
             AnchorPane Education2Page = loader.load();

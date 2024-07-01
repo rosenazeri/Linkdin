@@ -6,9 +6,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
    <children>
-      <Button layoutX="614.0" layoutY="411.0" mnemonicParsing="false" text="Sign In" textFill="#1a00ff" />
+      <Button layoutX="614.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleSignInAction" text="Sign In" textFill="#1a00ff" />
       <Label alignment="CENTER" layoutX="554.0" layoutY="153.0" prefHeight="18.0" prefWidth="171.0" text="your email address :" textFill="#1a00ff" />
       <Label alignment="CENTER" layoutX="596.0" layoutY="278.0" prefHeight="18.0" prefWidth="87.0" text="Password :" textFill="#1a00ff" />
       <TextField fx:id="Email" alignment="CENTER" layoutX="469.0" layoutY="201.0" prefHeight="26.0" prefWidth="342.0" promptText="Email" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="468.6" />

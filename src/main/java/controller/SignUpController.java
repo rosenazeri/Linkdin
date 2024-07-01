@@ -33,7 +33,7 @@ public class SignUpController {
     }
 
     @FXML
-    public void handleDone(ActionEvent event) {
+    public void handleDone(javafx.event.ActionEvent actionEvent) {
         if (!isValidInput()) {
             // Show error message to the user
             Alert alert = new Alert(Alert.AlertType.ERROR);

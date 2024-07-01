@@ -55,12 +55,12 @@ public class Profile {
     }
 
     @FXML
-    private void handleImageButtonClick(ActionEvent event) {
+    private void handleImageButtonClick(javafx.event.ActionEvent actionEvent) {
         // Code to handle the image button click event
     }
 
     @FXML
-    private void handleNextButtonClick(ActionEvent event) {
+    private void handleNextButtonClick(javafx.event.ActionEvent actionEvent) {
         String additionalNameText = additionalName.getText();
         if (additionalNameText.length() > 40) {
             additionalName.setStyle("-fx-border-color: red;");

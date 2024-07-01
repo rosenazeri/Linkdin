@@ -54,7 +54,7 @@ public class CertainJob {
     }
 
     @FXML
-    private void NextButtonClicked(ActionEvent event) {
+    private void NextButtonClicked(javafx.event.ActionEvent actionEvent) {
         initialize();
         if (jobtitleField.getText().length() > 40){
             jobtitleField.setStyle("-fx-border-color: red;");
@@ -93,7 +93,7 @@ public class CertainJob {
         }
     }
     @FXML
-    private void BackButtonClicked(ActionEvent event) {
+    private void BackButtonClicked(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
             AnchorPane CertainJobPage = loader.load();

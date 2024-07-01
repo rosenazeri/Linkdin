@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -12,7 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class Educations {
@@ -65,7 +65,7 @@ public class Educations {
     }
 
     @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+    private void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
             AnchorPane EducationPage = loader.load();
@@ -79,7 +79,7 @@ public class Educations {
     }
 
     @FXML
-    private void handleNextButtonAction(ActionEvent event) {
+    private void handleNextButtonAction(javafx.event.ActionEvent actionEvent) {
         if (academy.getText().length() > 40){
             academy.setStyle("-fx-border-color: red;");
             return;
@@ -132,4 +132,5 @@ public class Educations {
            user.getEducation().setActivities(newValue);
         });
     }
+
 }

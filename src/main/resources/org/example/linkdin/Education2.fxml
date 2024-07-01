@@ -6,17 +6,17 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Educations2">
    <children>
-      <Button fx:id="Back" layoutX="36.0" layoutY="29.0" mnemonicParsing="false" text="Back" textFill="#1a00ff" />
+      <Button fx:id="Back" layoutX="36.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" textFill="#1a00ff" />
       <Label alignment="CENTER" layoutX="556.0" layoutY="80.0" prefHeight="18.0" prefWidth="168.0" text="Extra explanations :" textFill="#1a00ff" />
-      <TextArea fx:id="Explanation" layoutX="466.0" layoutY="119.0" prefHeight="134.0" prefWidth="347.0" />
+      <TextArea fx:id="explanation" layoutX="466.0" layoutY="119.0" prefHeight="134.0" prefWidth="347.0" />
       <Label alignment="CENTER" layoutX="619.0" layoutY="284.0" prefHeight="18.0" prefWidth="41.0" text="Skils :" textFill="#1a00ff" />
       <TextField fx:id="s1" layoutX="565.0" layoutY="317.0" />
       <TextField fx:id="s2" layoutX="565.0" layoutY="368.0" />
       <TextField fx:id="s3" layoutX="565.0" layoutY="422.0" />
       <TextField fx:id="s4" layoutX="565.0" layoutY="477.0" />
       <TextField fx:id="s5" layoutX="565.0" layoutY="533.0" />
-      <Button fx:id="Done" layoutX="617.0" layoutY="591.0" mnemonicParsing="false" text="Done" textFill="#1a00ff" />
+      <Button fx:id="Done" layoutX="617.0" layoutY="591.0" mnemonicParsing="false" onAction="#handleDoneButtonAction" text="Done" textFill="#1a00ff" />
    </children>
 </AnchorPane>

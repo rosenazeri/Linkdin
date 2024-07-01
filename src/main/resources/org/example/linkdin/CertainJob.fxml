@@ -8,16 +8,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="720" prefWidth="1280" stylesheets="css/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720" prefWidth="1280" stylesheets="css/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CertainJob">
    <stylesheets>
       <URL value="@css/Style.css" />
    </stylesheets>
    <children>
       <Label alignment="CENTER" layoutX="584.0" layoutY="53.0" prefHeight="18.0" prefWidth="111.0" text="Title of your job :" textFill="#1a00ff" />
-      <TextField fx:id="Title" alignment="CENTER" layoutX="532.0" layoutY="85.0" prefHeight="26.0" prefWidth="216.0" promptText="Title of your job " styleClass="txt1" />
+      <TextField fx:id="title" alignment="CENTER" layoutX="532.0" layoutY="85.0" prefHeight="26.0" prefWidth="216.0" promptText="Title of your job " styleClass="txt1" />
       <Label alignment="CENTER" layoutX="574.0" layoutY="141.0" prefHeight="18.0" prefWidth="130.0" text="Type of employment :" textFill="#1a00ff" />
       <Label alignment="CENTER" layoutX="562.0" layoutY="223.0" prefHeight="18.0" prefWidth="154.0" text="Name of company :" textFill="#1a00ff" />
-      <TextField fx:id="company" alignment="CENTER" layoutX="532.0" layoutY="262.0" prefHeight="26.0" prefWidth="216.0" promptText="company" />
+      <TextField fx:id="Company" alignment="CENTER" layoutX="532.0" layoutY="262.0" prefHeight="26.0" prefWidth="216.0" promptText="company" />
       <Label alignment="CENTER" layoutX="584.0" layoutY="309.0" prefHeight="18.0" prefWidth="111.0" text="WorkPlace :" textFill="#1a00ff" />
       <TextField fx:id="WorkPlace" alignment="CENTER" layoutX="531.0" layoutY="347.0" prefHeight="26.0" prefWidth="216.0" promptText="WorkPlace " />
       <ComboBox fx:id="employmentOption" layoutX="565.0" layoutY="176.0" prefWidth="150.0" promptText="choose one option" />
@@ -27,7 +27,7 @@
       <Label alignment="CENTER" layoutX="590.0" layoutY="471.0" prefHeight="18.0" prefWidth="100.0" text="Start working :" textFill="#1a00ff" />
       <Label alignment="CENTER" layoutX="591.0" layoutY="555.0" text="Finished working :" textFill="#1a00ff" />
       <DatePicker layoutX="551.0" layoutY="596.0" />
-      <Button fx:id="next" layoutX="618.0" layoutY="650.0" mnemonicParsing="false" text="Next" textFill="#1a00ff" />
-      <Button fx:id="back" layoutX="34.0" layoutY="27.0" mnemonicParsing="false" text="Back" textFill="#1a00ff" />
+      <Button fx:id="next" layoutX="618.0" layoutY="650.0" mnemonicParsing="false" onAction="#NextButtonClicked" text="Next" textFill="#1a00ff" />
+      <Button fx:id="back" layoutX="34.0" layoutY="27.0" mnemonicParsing="false" onAction="#BackButtonClicked" text="Back" textFill="#1a00ff" />
    </children>
 </AnchorPane>

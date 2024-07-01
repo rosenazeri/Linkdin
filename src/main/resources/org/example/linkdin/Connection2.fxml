@@ -6,13 +6,13 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Connection2">
    <children>
-      <Button fx:id="back" layoutX="34.0" layoutY="34.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" text="Back" textFill="#1a00ff" />
+      <Button fx:id="back" layoutX="34.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="26.0" prefWidth="46.0" text="Back" textFill="#1a00ff" />
       <ComboBox fx:id="birthshow" layoutX="520.0" layoutY="117.0" prefHeight="26.0" prefWidth="238.0" />
       <Label layoutX="586.0" layoutY="82.0" text="Showing birth date :" textFill="#1a00ff" />
       <Label layoutX="566.0" layoutY="175.0" text="Get connection with me by :" textFill="#1a00ff" />
       <TextArea fx:id="ID" layoutX="494.0" layoutY="218.0" prefHeight="110.0" prefWidth="291.0" />
-      <Button layoutX="617.0" layoutY="360.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" text="Done" textFill="#1a00ff" />
+      <Button layoutX="617.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleDoneButtonAction" prefHeight="26.0" prefWidth="46.0" text="Done" textFill="#1a00ff" />
    </children>
 </AnchorPane>
