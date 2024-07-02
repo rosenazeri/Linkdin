@@ -69,7 +69,7 @@ public class Profile2 {
         // Initialization code goes here
     }
     @FXML
-    private void backButtonClicked(javafx.event.ActionEvent actionEvent) {
+    private void backButtonClicked(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
             AnchorPane Profile2Page = loader.load();
@@ -138,7 +138,7 @@ public class Profile2 {
         }
     }
     @FXML
-    private void certainJobButtonClicked(javafx.event.ActionEvent actionEvent) {
+    private void certainJobButtonClicked(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainJob.fxml"));
             AnchorPane Profile2Page = loader.load();
@@ -153,7 +153,7 @@ public class Profile2 {
         }
     }
     @FXML
-    private void educationButtonClicked(javafx.event.ActionEvent actionEvent) {
+    private void educationButtonClicked(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Education.fxml"));
             AnchorPane Profile2Page = loader.load();

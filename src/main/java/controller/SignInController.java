@@ -24,7 +24,7 @@ public class SignInController {
         // Initialization code goes here
     }
     @FXML
-    private void handleSignInAction(javafx.event.ActionEvent actionEvent) {
+    private void handleSignInAction(ActionEvent actionEvent) {
         String email = emailField.getText();
         String password = passwordField.getText();
         User newUser = null;

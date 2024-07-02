@@ -5,13 +5,29 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
+<AnchorPane prefHeight="720" prefWidth="1280" style="-fx-background-color: #bfb8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
    <children>
-      <Button layoutX="614.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleSignInAction" text="Sign In" textFill="#1a00ff" />
-      <Label alignment="CENTER" layoutX="554.0" layoutY="153.0" prefHeight="18.0" prefWidth="171.0" text="your email address :" textFill="#1a00ff" />
-      <Label alignment="CENTER" layoutX="596.0" layoutY="278.0" prefHeight="18.0" prefWidth="87.0" text="Password :" textFill="#1a00ff" />
-      <TextField fx:id="Email" alignment="CENTER" layoutX="469.0" layoutY="201.0" prefHeight="26.0" prefWidth="342.0" promptText="Email" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="468.6" />
-      <PasswordField fx:id="PassWord" alignment="CENTER" layoutX="468.0" layoutY="333.0" prefHeight="26.0" prefWidth="342.0" promptText="PassWord" />
+      <Button layoutX="592.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleSignInAction" text="Sign In" textFill="#1a00ff">
+         <font>
+            <Font name="Lucida Bright" size="20.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="536.0" layoutY="153.0" prefHeight="23.0" prefWidth="205.0" text="your email address :" textFill="#1a00ff">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="585.0" layoutY="278.0" prefHeight="23.0" prefWidth="108.0" text="Password :" textFill="#1a00ff">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font></Label>
+      <TextField fx:id="Email" alignment="CENTER" layoutX="469.0" layoutY="201.0" prefHeight="26.0" prefWidth="342.0" promptText="Email" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="468.6">
+         <font>
+            <Font name="Lucida Bright" size="12.0" />
+         </font></TextField>
+      <PasswordField fx:id="PassWord" alignment="CENTER" layoutX="468.0" layoutY="333.0" prefHeight="26.0" prefWidth="342.0" promptText="PassWord">
+         <font>
+            <Font name="Lucida Bright" size="12.0" />
+         </font></PasswordField>
    </children>
 </AnchorPane>

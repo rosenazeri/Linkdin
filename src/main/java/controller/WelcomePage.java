@@ -9,11 +9,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.io.IOException;
 
-public class WelcomePage extends Parent {
+public class WelcomePage {
     @FXML
     private Label welcome;
 
@@ -28,7 +27,7 @@ public class WelcomePage extends Parent {
     }
 
     @FXML
-    private void handleSignInAction(javafx.event.ActionEvent actionEvent) {
+    private void handleSignInAction(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("sign-in.fxml"));
             AnchorPane signInPage = loader.load();
@@ -42,7 +41,7 @@ public class WelcomePage extends Parent {
     }
 
     @FXML
-    private void handleSignUpAction(javafx.event.ActionEvent actionEvent) {
+    private void handleSignUpAction(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("sign-up.fxml"));
             AnchorPane signUpPage = loader.load();
@@ -53,11 +52,6 @@ public class WelcomePage extends Parent {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public Node getStyleableNode() {
-        return super.getStyleableNode();
     }
 
 }

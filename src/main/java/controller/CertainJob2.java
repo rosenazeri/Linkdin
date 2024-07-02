@@ -11,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
 
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -48,7 +48,7 @@ public class CertainJob2 {
     }
 
     @FXML
-    private void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
+    private void handleBackButtonAction(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainJob.fxml"));
             AnchorPane CertainJob2Page = loader.load();
@@ -62,7 +62,7 @@ public class CertainJob2 {
     }
 
     @FXML
-    private void handleDoneButtonAction(javafx.event.ActionEvent actionEvent) {
+    private void handleDoneButtonAction(ActionEvent actionEvent) {
         if (Explanation.getText().length() > 1000){
             Explanation.setStyle("-fx-border-color: red;");
             return ;

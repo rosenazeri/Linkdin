@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.fxml.Initializable;
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.io.IOException;
 
 public class Educations2 {
@@ -47,7 +47,7 @@ public class Educations2 {
         // Initialization code goes here
     }
     @FXML
-    private void handleDoneButtonAction(javafx.event.ActionEvent actionEvent) {
+    private void handleDoneButtonAction(ActionEvent actionEvent) {
         if (ExtraExplanation.getText().length() > 1000){
             ExtraExplanation.setStyle("-fx-border-color: red;");
             return ;
@@ -88,7 +88,7 @@ public class Educations2 {
     }
 
     @FXML
-    private void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
+    private void handleBackButtonAction(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Education.fxml"));
             AnchorPane Education2Page = loader.load();

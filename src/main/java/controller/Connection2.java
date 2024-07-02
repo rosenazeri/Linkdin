@@ -8,7 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
 
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.io.IOException;
 
 public class Connection2 {
@@ -33,7 +33,7 @@ public class Connection2 {
     public void initialize() {
         birthshow.getItems().addAll("Only me" , "My followers" , "My connections" , "Everyone");
     }
-    public void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
+    public void handleBackButtonAction(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Connection.fxml"));
             AnchorPane Connection2Page = loader.load();
@@ -46,7 +46,7 @@ public class Connection2 {
         }
     }
 
-    public void handleDoneButtonAction(javafx.event.ActionEvent actionEvent) {
+    public void handleDoneButtonAction(ActionEvent actionEvent) {
         if (ID.getText().length() > 40){
             ID.setStyle("-fx-border-color: red;");
             return ;

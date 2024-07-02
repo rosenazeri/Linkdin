@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import model.User;
 import javafx.fxml.FXML;
 
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
 import java.io.IOException;
 
 public class Connections {
@@ -52,7 +52,7 @@ public class Connections {
     }
 
     @FXML
-    private void handleBackButtonAction(javafx.event.ActionEvent actionEvent) {
+    private void handleBackButtonAction(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
             AnchorPane ConnectionPage = loader.load();
@@ -68,7 +68,7 @@ public class Connections {
     }
 
     @FXML
-    private void handleNextButtonAction(javafx.event.ActionEvent actionEvent) {
+    private void handleNextButtonAction(ActionEvent actionEvent) {
         if (Address.getText().length() > 220){
             Address.setStyle("-fx-border-color: red;");
             return ;

@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.embed.swing.SwingFXUtils;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,7 +15,6 @@ import javafx.stage.Stage;
 import model.User;
 
 import javax.imageio.ImageIO;
-import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -22,6 +22,9 @@ import java.io.IOException;
 import static model.User.isValidImage;
 
 public class Profile {
+
+    @FXML
+    private Button back;
     @FXML
     private AnchorPane root;
 
@@ -55,12 +58,12 @@ public class Profile {
     }
 
     @FXML
-    private void handleImageButtonClick(javafx.event.ActionEvent actionEvent) {
+    private void handleImageButtonClick(ActionEvent actionEvent) {
         // Code to handle the image button click event
     }
 
     @FXML
-    private void handleNextButtonClick(javafx.event.ActionEvent actionEvent) {
+    private void handleNextButtonClick(ActionEvent actionEvent) {
         String additionalNameText = additionalName.getText();
         if (additionalNameText.length() > 40) {
             additionalName.setStyle("-fx-border-color: red;");
@@ -98,6 +101,19 @@ public class Profile {
             profile2Controller.initData(user); // ارسال اطلاعات کاربر به کنترلر صفحه Profile2
             Stage stage = (Stage) nextButton.getScene().getWindow();
             Scene scene = new Scene(profilePage);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void backHandler(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+            AnchorPane ProfilePage = loader.load();
+            Stage stage = (Stage) back.getScene().getWindow();
+            Scene scene = new Scene(ProfilePage);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

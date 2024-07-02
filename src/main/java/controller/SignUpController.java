@@ -7,8 +7,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
 import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class SignUpController {
     }
 
     @FXML
-    public void handleDone(javafx.event.ActionEvent actionEvent) {
+    public void handleDone(ActionEvent actionEvent) {
         if (!isValidInput()) {
             // Show error message to the user
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -134,4 +134,5 @@ public class SignUpController {
         }
         return true;
     }
+
 }

@@ -7,8 +7,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
+import javafx.event.ActionEvent;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class CertainJob {
@@ -54,7 +54,7 @@ public class CertainJob {
     }
 
     @FXML
-    private void NextButtonClicked(javafx.event.ActionEvent actionEvent) {
+    private void NextButtonClicked(ActionEvent actionEvent) {
         initialize();
         if (jobtitleField.getText().length() > 40){
             jobtitleField.setStyle("-fx-border-color: red;");
@@ -93,7 +93,7 @@ public class CertainJob {
         }
     }
     @FXML
-    private void BackButtonClicked(javafx.event.ActionEvent actionEvent) {
+    private void BackButtonClicked(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
             AnchorPane CertainJobPage = loader.load();
