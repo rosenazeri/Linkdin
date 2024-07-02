@@ -34,20 +34,6 @@ public class Post{
     private Button postButton;
 
     @FXML
-    private void BackHandler(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-            AnchorPane PostPage = loader.load();
-            Stage stage = (Stage) backButton.getScene().getWindow();
-            Scene scene = new Scene(PostPage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
     private void mediaHandler(ActionEvent event) {
         // Handle media upload action
     }

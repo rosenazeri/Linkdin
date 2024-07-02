@@ -10,70 +10,58 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
 <AnchorPane prefHeight="720" prefWidth="1280" style="-fx-background-color: #bfb8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home">
-   <children>
-      <TabPane layoutY="71.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="717.0" prefWidth="1280" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="194.4">
-         <tabs>
-            <Tab text="Search">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1118.0" style="-fx-background-color: #cec8ff;">
-                     <children>
-                        <TextField fx:id="Search" alignment="CENTER" layoutX="185.0" layoutY="1.0" onAction="#SearchHandler" prefHeight="26.0" prefWidth="896.0" promptText="Search" />
-                        <TableView layoutX="184.0" layoutY="48.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="568.0" prefWidth="895.0" style="-fx-background-color: #e2dfff;">
-                          <columns>
-                            <TableColumn minWidth="9.0" prefWidth="110.0" text="Name" />
-                            <TableColumn minWidth="0.0" prefWidth="110.0" text="Lastname" />
-                              <TableColumn prefWidth="110.0" text="Job" />
-                              <TableColumn prefWidth="110.0" text="Industry" />
-                              <TableColumn prefWidth="110.0" text="field" />
-                              <TableColumn prefWidth="236.79998779296875" text="Skills" />
-                              <TableColumn prefWidth="110.0" text="Country " />
-                          </columns>
-                        </TableView>
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </AnchorPane>
-              </content>
-            </Tab>
-            <Tab text="Jobs">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="582.0" prefWidth="1259.0" />
-               </content>
-            </Tab>
-            <Tab text=" Notifications">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab text="Post">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab text="My Network">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab text="Home">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-         </tabs>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </TabPane>
-      <Button layoutX="23.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleProfileButton" prefHeight="47.0" prefWidth="114.0" text="Profile" textFill="#1a00ff">
-         <font>
-            <Font name="Lucida Bright" size="18.0" />
-         </font></Button>
-      <Button layoutX="1135.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleMessageButton" prefHeight="47.0" prefWidth="114.0" text="Message" textFill="#1a00ff">
-         <font>
-            <Font name="Lucida Bright" size="18.0" />
-         </font></Button>
-   </children>
+    <children>
+        <TabPane layoutY="91.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="698.0" prefWidth="1280" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="194.4">
+            <tabs>
+                <Tab text="Search">
+                    <content>
+                        <fx:include source="Search.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="Jobs">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="582.0" prefWidth="1259.0" />
+                    </content>
+                </Tab>
+                <Tab text=" Notifications">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <?import javafx.scene.control.Tab?>
+                <?import javafx.fxml.FXMLLoader?>
+                <Tab text="Post">
+                    <content>
+                        <fx:include source="Post.fxml" />
+                    </content>
+                </Tab>
+                <Tab text="My Network">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab text="Home">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </TabPane>
+        <Button layoutX="23.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleProfileButton" prefHeight="47.0" prefWidth="114.0" text="Profile" textFill="#1a00ff">
+            <font>
+                <Font name="Lucida Bright" size="18.0" />
+            </font></Button>
+        <Button layoutX="1135.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleMessageButton" prefHeight="47.0" prefWidth="114.0" text="Message" textFill="#1a00ff">
+            <font>
+                <Font name="Lucida Bright" size="18.0" />
+            </font></Button>
+    </children>
 </AnchorPane>

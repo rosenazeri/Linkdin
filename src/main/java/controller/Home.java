@@ -46,12 +46,6 @@ public class Home {
     }
 
     @FXML
-    private void SearchHandler() {
-        String searchTerm = Search.getText();
-        // Handle search functionality based on the searchTerm
-    }
-
-    @FXML
     private void handleProfileButton() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowProfile.fxml"));
