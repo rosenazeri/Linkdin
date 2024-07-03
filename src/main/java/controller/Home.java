@@ -47,12 +47,6 @@ public class Home {
     }
 
     @FXML
-    private void SearchHandler() {
-        String searchTerm = Search.getText();
-        // Handle search functionality based on the searchTerm
-    }
-
-    @FXML
     private void handleProfileButton() {
         HelloApplication m = new HelloApplication();
         try {

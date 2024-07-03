@@ -36,6 +36,7 @@ public class Post{
     Button postButton;
 
     @FXML
+<<<<<<< HEAD
     private void BackHandler(ActionEvent event) {
         HelloApplication m = new HelloApplication();
         try {
@@ -46,6 +47,8 @@ public class Post{
     }
 
     @FXML
+=======
+>>>>>>> b4616ea29c91ed9a0e07c7e7d9a6f957c6830be4
     private void mediaHandler(ActionEvent event) {
         // Handle media upload action
     }
