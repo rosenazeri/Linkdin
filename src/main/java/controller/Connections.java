@@ -2,6 +2,7 @@ package controller;
 
 import controller.Connection2;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -13,8 +14,10 @@ import javafx.event.ActionEvent;
 import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Connections {
+public class Connections implements Initializable {
     User user;
     @FXML
     Button back;
@@ -47,8 +50,8 @@ public class Connections {
     @FXML
     Button next;
 
-    @FXML
-    private void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
         Phonetype.getItems().addAll("Cellular phone" , "Home phone" , "Landline phone");
         Email.setText(user.getEmail());
     }

@@ -2,6 +2,7 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -12,8 +13,10 @@ import javafx.event.ActionEvent;
 import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Connection2 {
+public class Connection2 implements Initializable {
     User user;
     @FXML
     Button back;
@@ -32,7 +35,8 @@ public class Connection2 {
 
     @FXML
     Button done;
-    public void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
         birthshow.getItems().addAll("Only me" , "My followers" , "My connections" , "Everyone");
     }
     public void handleBackButtonAction(ActionEvent actionEvent) {

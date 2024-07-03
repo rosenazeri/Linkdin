@@ -67,7 +67,7 @@ public class Profile2 {
     TextField industryTextField;
 
 
-    void initialize() {
+   private void initialize() {
         // Initialization code goes here
     }
     @FXML

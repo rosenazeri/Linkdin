@@ -2,6 +2,7 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -11,8 +12,10 @@ import javafx.event.ActionEvent;
 import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class CertainJob {
+public class CertainJob implements Initializable {
      User user;
     @FXML
      Label Title;
@@ -46,8 +49,8 @@ public class CertainJob {
      Button nextButton;
     @FXML
      Button backButton;
-
-    public void initialize() {
+@Override
+    public void initialize(URL url, ResourceBundle rb) {
         // You can initialize ComboBox options here if needed
         employmentOption.getItems().addAll("full time", "part time", "self employment", "freelance",
                 "conventional", "internship", "internship with pay", "seasonal");
@@ -56,7 +59,6 @@ public class CertainJob {
 
     @FXML
     private void NextButtonClicked(ActionEvent actionEvent) {
-        initialize();
         if (jobtitleField.getText().length() > 40){
             jobtitleField.setStyle("-fx-border-color: red;");
             return ;
