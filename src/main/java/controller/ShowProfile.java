@@ -81,4 +81,13 @@ public class ShowProfile {
             e.printStackTrace();
         }
     }
+
+    public void showingFollowers(ActionEvent actionEvent) {
+    }
+
+    public void ShowFollowing(ActionEvent actionEvent) {
+    }
+
+    public void ShowConnection(ActionEvent actionEvent) {
+    }
 }

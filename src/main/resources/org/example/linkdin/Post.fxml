@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1259.0" style="-fx-background-color: #cec8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Post">
+<AnchorPane prefHeight="608.0" prefWidth="1259.0" style="-fx-background-color: #cec8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Posts">
    <children>
       <TextArea layoutX="337.0" layoutY="25.0" prefHeight="206.0" prefWidth="594.0" promptText="Caption">
          <opaqueInsets>

@@ -31,27 +31,27 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Button fx:id="editProfile" layoutX="978.0" layoutY="246.0" mnemonicParsing="false" onAction="#EditProfileHandler" text="Edit Profile" >
+      <Button fx:id="editProfile" layoutX="978.0" layoutY="246.0" mnemonicParsing="false" onAction="#EditProfileHandler" text="Edit Profile" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="NameAndLastname" layoutX="464.0" layoutY="255.0" prefHeight="30.0" prefWidth="426.0" text="name and lastname">
+      <Label fx:id="NameAndLastname" layoutX="464.0" layoutY="255.0" prefHeight="30.0" prefWidth="426.0" text="name and lastname" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="Biography" layoutX="464.0" layoutY="292.0" prefHeight="30.0" prefWidth="623.0" text="Biography">
+      <Label fx:id="Biography" layoutX="464.0" layoutY="292.0" prefHeight="30.0" prefWidth="623.0" text="Biography" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font>
       </Label>
       <ListView layoutX="577.0" layoutY="439.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="back" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#backHandler" text="Back" >
+      <Button fx:id="back" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#backHandler" text="Back" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Button>
-      <TabPane layoutX="228.0" layoutY="412.0" prefHeight="254.0" prefWidth="846.0" style="-fx-background-color: #cec8ff;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="130.0">
+      <TabPane layoutX="228.0" layoutY="412.0" prefHeight="254.0" prefWidth="846.0" style="-fx-background-color: #cec8ff;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="143.2">
         <tabs>
           <Tab text="Experiences">
             <content>
@@ -95,8 +95,26 @@
             </Tab>
         </tabs>
          <padding>
-            <Insets left="25.0" />
+            <Insets left="25.0" right="25.0" />
          </padding>
       </TabPane>
+      <Button fx:id="followers" layoutX="464.0" layoutY="348.0" mnemonicParsing="false" onAction="#showingFollowers" text="Followers" textFill="#1a00ff">
+         <font>
+            <Font name="Lucida Bright" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="following" layoutX="651.0" layoutY="348.0" mnemonicParsing="false" onAction="#ShowFollowing" text="Following" textFill="#1a00ff">
+         <font>
+            <Font name="Lucida Bright" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="connection" layoutX="839.0" layoutY="348.0" mnemonicParsing="false" onAction="#ShowConnection" text="Connection" textFill="#1a00ff">
+         <font>
+            <Font name="Lucida Bright" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="num1" layoutX="549.0" layoutY="352.0" text="num1" textFill="#1a00ff" />
+      <Label fx:id="num2" layoutX="737.0" layoutY="352.0" text="num2" textFill="#1a00ff" />
+      <Label fx:id="num3" layoutX="937.0" layoutY="352.0" text="num3" textFill="#1a00ff" />
    </children>
 </AnchorPane>
