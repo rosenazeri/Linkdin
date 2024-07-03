@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.User;
 
 import java.io.IOException;
 import java.util.Date;
@@ -18,6 +19,9 @@ import java.util.Map;
 public class HelloApplication extends Application {
     private static Stage stg;
     private static Scene MainMenu;
+    public static User user = new User("Rose" , "Nazeri" , "Rosiiiw" , "rosenazeri83@gmail.com",
+            "Rose2005",null,null , "20 years old" , null , "math"
+    , null, null , null);
     @Override
     public void start(Stage stage) {
         try {

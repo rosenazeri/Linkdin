@@ -78,14 +78,20 @@ public class Connections implements Initializable {
             Address.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            Address.setStyle("");
         if (configurationLink.getText().length() > 40){
             configurationLink.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            configurationLink.setStyle("");
         if (PhoneNum.getText().length() > 40){
             PhoneNum.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            PhoneNum.setStyle("");
         setUser(user);
 
         HelloApplication m = new HelloApplication();

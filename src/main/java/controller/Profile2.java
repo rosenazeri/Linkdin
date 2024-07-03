@@ -89,23 +89,33 @@ public class Profile2 {
            BiographyTextField.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            BiographyTextField.setStyle("");
         if (countryTextField.getText().length() > 60) {
             countryTextField.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            countryTextField.setStyle("");
         if (cityTextField.getText().length() > 60) {
             cityTextField.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            cityTextField.setStyle("");
         if (industryTextField.getText().length() > 60){
             industryTextField.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            industryLabel.setStyle("");
        Image image = Background.getImage();
         if (image == null || ((Image) image).isError()) {
             background.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            background.setStyle("");
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
@@ -118,6 +128,8 @@ public class Profile2 {
                 background.setStyle("-fx-border-color: red;");
                 return;
             }
+            else
+                background.setStyle("");
         } catch (IOException e) {
             e.printStackTrace();
         }

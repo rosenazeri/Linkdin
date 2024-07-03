@@ -54,26 +54,38 @@ public class Educations2 {
             ExtraExplanation.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            ExtraExplanation.setStyle("");
         if (s1.getText().length() >40){
             s1.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            s1.setStyle("");
         if (s2.getText().length() >40){
             s2.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            s2.setStyle("");
         if (s3.getText().length() >40){
             s3.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            s3.setStyle("");
         if (s4.getText().length() >40){
             s4.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            s4.setStyle("");
         if (s5.getText().length() >40){
             s5.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            s5.setStyle("");
 
         setUser(user);
 

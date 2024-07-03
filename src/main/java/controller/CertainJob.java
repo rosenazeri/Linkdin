@@ -63,22 +63,32 @@ public class CertainJob implements Initializable {
             jobtitleField.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            jobtitleField.setStyle("");
         if (companyField.getText().length() > 40){
             companyField.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            companyField.setStyle("");
         if (workPlaceField.getText().length() > 40){
             workPlaceField.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            workPlaceField.setStyle("");
         if (startDatePicker == null) {
             startDatePicker.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            startDatePicker.setStyle("");
         if (endDatePicker == null) {
             endDatePicker.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            endDatePicker.setStyle("");
 
         setUser(user);
 

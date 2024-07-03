@@ -39,9 +39,11 @@ public class SignInController {
         if (newUser == null) {
             emailField.setStyle("-fx-border-color: red;");
         } else {
+            emailField.setStyle("");
             if (!newUser.getPassword().equals(password)) {
                 passwordField.setStyle("-fx-border-color: red;");
             } else {
+                passwordField.setStyle("");
                 HelloApplication m = new HelloApplication();
                     try {
                         m.changeScene(4);

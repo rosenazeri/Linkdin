@@ -70,24 +70,27 @@ public class Profile {
             additionalName.setStyle("-fx-border-color: red;");
             return;
         }
-
+        else
+            additionalName.setStyle("");
         Image image = imageData.getImage();
         if (image == null || ((Image) image).isError()) {
             imageData.setStyle("-fx-border-color: red;");
             return;
         }
-
+        else
+            imageData.setStyle("");
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
 
         try {
             ImageIO.write(bufferedImage, "png", byteArrayOutputStream);
             byte[] imageInBytes = byteArrayOutputStream.toByteArray();
-
             if (!isValidImage(imageInBytes)) {
                 imageData.setStyle("-fx-border-color: red;");
                 return;
             }
+            else
+                imageData.setStyle("");
         } catch (IOException e) {
             e.printStackTrace();
         }

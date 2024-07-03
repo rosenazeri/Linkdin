@@ -53,6 +53,8 @@ public class Connection2 implements Initializable {
             ID.setStyle("-fx-border-color: red;");
             return ;
         }
+        else
+            ID.setStyle("");
         initData(user);
         HelloApplication m = new HelloApplication();
         try {

@@ -60,6 +60,7 @@ public class SignUpController {
             if (isDuplicateEmail) {
                 email.setStyle("-fx-border-color: red;");
             } else {
+                email.setStyle("");
                 userData.add(user);
                 HelloApplication m = new HelloApplication();
                 try {
@@ -75,42 +76,62 @@ public class SignUpController {
             firstName.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            firstName.setStyle("");
         if (firstName.getText().length() > 20) {
             firstname.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            firstName.setStyle("");
         if (lastName.getText().isEmpty()) {
             lastName.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            lastName.setStyle("");
         if (lastName.getText().length() > 40) {
             lastName.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            lastName.setStyle("");
         if (email.getText().isEmpty()) {
             email.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            email.setStyle("");
         if (!isValidEmail(email.getText())) {
             email.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            email.setStyle("");
         if (password1.getText().isEmpty() ) {
            password1.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            password1.setStyle("");
         if (!isValidPassword(password1.getText())) {
             password1.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            password1.setStyle("");
         if (!(password1.getText().equals(password2.getText()))) {
             password2.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            password2.setStyle("");
         if (password2.getText().isEmpty()) {
             password2.setStyle("-fx-border-color: red;");
             return false;
         }
+        else
+            password2.setStyle("");
         return true;
     }
 

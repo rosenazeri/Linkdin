@@ -81,28 +81,39 @@ public class Educations {
             academy.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            academy.setStyle("");
         if (field.getText().length() > 40){
             field.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            field.setStyle("");
         float gradeF = Float.parseFloat(String.valueOf(grade));
         if ( gradeF > 20 || gradeF < 0){
             grade.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            grade.setStyle("");
         if (activities.getText().length() > 500){
             activities.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            activities.setStyle("");
         if (startEducation == null) {
             startEducation.setStyle("-fx-border-color: red;");
             return;
         }
+        else
+            startEducation.setStyle("");
         if (finishEducation == null) {
             finishEducation.setStyle("-fx-border-color: red;");
             return;
         }
-
+        else
+            finishEducation.setStyle("");
         setUser(user);
 
         try {
