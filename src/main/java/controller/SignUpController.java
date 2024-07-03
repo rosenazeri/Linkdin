@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import model.User;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
+import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,13 +18,20 @@ import static model.User.isValidEmail;
 import static model.User.isValidPassword;
 
 public class SignUpController {
-    @FXML private TextField firstName;
-    @FXML private TextField lastName;
-    @FXML private TextField email;
-    @FXML private PasswordField password1;
-    @FXML private PasswordField password2;
-    @FXML private Label firstname;
-    @FXML private Button done;
+    @FXML
+    TextField firstName;
+    @FXML
+    TextField lastName;
+    @FXML
+    TextField email;
+    @FXML
+    PasswordField password1;
+    @FXML
+    PasswordField password2;
+    @FXML
+    Label firstname;
+    @FXML
+    Button done;
 
     private List<User> userData = new ArrayList<>();
 
@@ -35,30 +43,7 @@ public class SignUpController {
     @FXML
     public void handleDone(ActionEvent actionEvent) {
         if (!isValidInput()) {
-            // Show error message to the user
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Invalid Input");
-            alert.setHeaderText("Please correct the following errors:");
 
-            StringBuilder errorMessage = new StringBuilder();
-            if (firstName.getText().isEmpty() || firstName.getText().length() > 20) {
-                errorMessage.append("First Name must not be empty and should be less than 20 characters.\n");
-            }
-            if (lastName.getText().isEmpty() || lastName.getText().length() > 40) {
-                errorMessage.append("Last Name must not be empty and should be less than 40 characters.\n");
-            }
-            if (email.getText().isEmpty() || !isValidEmail(email.getText())) {
-                errorMessage.append("Email address is not valid.\n");
-            }
-            if (password1.getText().isEmpty() || !isValidPassword(password1.getText())) {
-                errorMessage.append("Password is invalid.\n");
-            }
-            if (!password1.getText().equals(password2.getText()) || password2.getText().isEmpty()) {
-                errorMessage.append("Passwords do not match or are empty.\n");
-            }
-
-            alert.setContentText(errorMessage.toString());
-            alert.show();
         } else {
             User user = new User(firstName.getText(), lastName.getText(), null, email.getText(), password1.getText(), null
                     , null, null, null, null, null, null, null);
@@ -71,21 +56,13 @@ public class SignUpController {
                 }
             }
             if (isDuplicateEmail) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Duplicate Email");
-                alert.setHeaderText("Email address is already in use.");
-                alert.setContentText("Please use a different email address.");
-                alert.show();
+                email.setStyle("-fx-border-color: red;");
             } else {
                 userData.add(user);
+                HelloApplication m = new HelloApplication();
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-                    AnchorPane signUpPage = loader.load();
-                    Stage stage = (Stage) done.getScene().getWindow();
-                    Scene scene = new Scene(signUpPage);
-                    stage.setScene(scene);
-                    stage.show();
-                } catch (IOException e) {
+                    m.changeScene(4);
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }

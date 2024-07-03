@@ -12,79 +12,72 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 
 public class ShowProfile {
 
     @FXML
-    private AnchorPane Name;
+     AnchorPane Name;
 
     @FXML
-    private ImageView imageView1;
+     ImageView imageView1;
 
     @FXML
-    private ImageView imageView2;
+     ImageView imageView2;
 
     @FXML
-    private Button editProfileButton;
+     Button editProfileButton;
 
     @FXML
-    private Label NameAndLastname;
+     Label NameAndLastname;
 
     @FXML
-    private Label biography;
+     Label biography;
 
     @FXML
-    private ListView<Object> listView1;
+     ListView<Object> listView1;
 
     @FXML
-    private Button backButton;
+     Button backButton;
 
     @FXML
-    private TabPane tabPane;
+     TabPane tabPane;
 
     @FXML
-    private Tab experiencesTab;
+     Tab experiencesTab;
 
     @FXML
-    private Tab educationsTab;
+     Tab educationsTab;
 
     @FXML
-    private Tab certificatesTab;
+     Tab certificatesTab;
 
     @FXML
-    private Tab skillsTab;
+     Tab skillsTab;
 
     @FXML
-    private Tab companiesTab;
+     Tab companiesTab;
 
     public void initialize() {
         // Add initialization logic here
     }
 
     public void backHandler(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-            AnchorPane showProfilePage = loader.load();
-            Stage stage = (Stage) backButton.getScene().getWindow();
-            Scene scene = new Scene(showProfilePage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(4);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void EditProfileHandler(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
-            AnchorPane showProfilePage = loader.load();
-            Stage stage = (Stage) editProfileButton.getScene().getWindow();
-            Scene scene = new Scene(showProfilePage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(5);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

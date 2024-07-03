@@ -10,40 +10,42 @@ import model.User;
 import javafx.fxml.FXML;
 
 import javafx.event.ActionEvent;
+import org.example.linkdin.HelloApplication;
+
 import java.io.IOException;
 
 public class Connections {
-    private User user;
+    User user;
     @FXML
-    private Button back;
+    Button back;
 
     @FXML
-    private Label configurationLink;
+    Label configurationLink;
 
     @FXML
-    private TextField link;
+    TextField link;
 
     @FXML
-    private Label emailLabel;
+    Label emailLabel;
 
     @FXML
-    private TextField Email;
+    TextField Email;
 
     @FXML
-    private Label phoneNumberLabel;
+    Label phoneNumberLabel;
 
     @FXML
-    private TextField PhoneNum;
+    TextField PhoneNum;
     @FXML
-    private ComboBox Phonetype;
+    ComboBox Phonetype;
 
     @FXML
-    private TextArea Address;
+    TextArea Address;
 
     @FXML
-    private DatePicker DateOfBirth;
+    DatePicker DateOfBirth;
     @FXML
-    private Button next;
+    Button next;
 
     @FXML
     private void initialize() {
@@ -83,14 +85,10 @@ public class Connections {
         }
         setUser(user);
 
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Connection2.fxml"));
-            AnchorPane ConnectionPage = loader.load();
-            Stage stage = (Stage) next.getScene().getWindow();
-            Scene scene = new Scene(ConnectionPage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(11);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

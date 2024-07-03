@@ -10,16 +10,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 
 public class SignInController {
     @FXML
-    private Button signInButton;
+    Button signInButton;
     @FXML
-    private TextField emailField;
+    TextField emailField;
     @FXML
-    private PasswordField passwordField;
+    PasswordField passwordField;
     public void initialize() {
         // Initialization code goes here
     }
@@ -40,16 +41,12 @@ public class SignInController {
             if (!newUser.getPassword().equals(password)) {
                 passwordField.setStyle("-fx-border-color: red;");
             } else {
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-                    AnchorPane signInPage = loader.load();
-                    Stage stage = (Stage) signInButton.getScene().getWindow();
-                    Scene scene = new Scene(signInPage);
-                    stage.setScene(scene);
-                    stage.show();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                HelloApplication m = new HelloApplication();
+                    try {
+                        m.changeScene(4);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
             }
         }
     }

@@ -6,6 +6,7 @@ import controller.Educations;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -16,6 +17,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
+import org.example.linkdin.HelloApplication;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -25,59 +27,55 @@ import java.io.IOException;
 import static model.User.isValidBackground;
 
 public class Profile2 {
-    private User user;
+    User user;
     @FXML
-    private Button backgroundButton;
+    Button backgroundButton;
     @FXML
-    private Button backButton;
+    Button backButton;
     @FXML
-    private Button certainJobButton ;
+    Button certainJobButton ;
 
     @FXML
-    private Button nextButton;
+    Button nextButton;
 
     @FXML
-    private Button educationButton;
+    Button educationButton;
     @FXML
-    private Button connectionButton;
+    Button connectionButton;
     @FXML
-    private ImageView background ;
+    ImageView background ;
     @FXML
-    private Label Biography ;
+    Label Biography ;
 
     @FXML
-    private Label countryLabel;
+    Label countryLabel;
 
     @FXML
-    private Label cityLabel;
+    Label cityLabel;
     @FXML
-    private TextField BiographyTextField ;
+    TextField BiographyTextField ;
     @FXML
-    private TextField countryTextField;
+    TextField countryTextField;
 
     @FXML
-    private TextField cityTextField;
+    TextField cityTextField;
 
     @FXML
-    private Label industryLabel;
+    Label industryLabel;
 
     @FXML
-    private TextField industryTextField;
+    TextField industryTextField;
 
 
-    private void initialize() {
+    void initialize() {
         // Initialization code goes here
     }
     @FXML
     private void backButtonClicked(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
-            AnchorPane Profile2Page = loader.load();
-            Stage stage = (Stage) backButton.getScene().getWindow();
-            Scene scene = new Scene(Profile2Page);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(5);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -123,17 +121,11 @@ public class Profile2 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         initData(user);
-
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-            AnchorPane profile2Page = loader.load();
-            Stage stage = (Stage) nextButton.getScene().getWindow();
-            Scene scene = new Scene(profile2Page);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(4);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -141,13 +133,13 @@ public class Profile2 {
     private void certainJobButtonClicked(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainJob.fxml"));
-            AnchorPane Profile2Page = loader.load();
+            AnchorPane certainJobPage = loader.load();
             CertainJob controller = loader.getController();
             controller.setUser(user);
-            Stage stage = (Stage) certainJobButton.getScene().getWindow();
-            Scene scene = new Scene(Profile2Page);
-            stage.setScene(scene);
-            stage.show();
+            Scene scene = new Scene(certainJobPage);
+            Stage currentStage = (Stage) certainJobButton.getScene().getWindow();
+            currentStage.setScene(scene);
+            currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

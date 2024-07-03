@@ -9,39 +9,37 @@ import javafx.stage.Stage;
 import model.User;
 
 import javafx.event.ActionEvent;
+import org.example.linkdin.HelloApplication;
+
 import java.io.IOException;
 
 public class Connection2 {
-    private User user;
+    User user;
     @FXML
-    private Button back;
+    Button back;
 
     @FXML
-    private ComboBox birthshow;
+    ComboBox birthshow;
 
     @FXML
-    private Label showingBirthDateLabel;
+    Label showingBirthDateLabel;
 
     @FXML
-    private Label connectionLabel;
+    Label connectionLabel;
 
     @FXML
-    private TextArea ID;
+    TextArea ID;
 
     @FXML
-    private Button done;
+    Button done;
     public void initialize() {
         birthshow.getItems().addAll("Only me" , "My followers" , "My connections" , "Everyone");
     }
     public void handleBackButtonAction(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Connection.fxml"));
-            AnchorPane Connection2Page = loader.load();
-            Stage stage = (Stage) back.getScene().getWindow();
-            Scene scene = new Scene(Connection2Page);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(10);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -52,14 +50,10 @@ public class Connection2 {
             return ;
         }
         initData(user);
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
-            AnchorPane Connection2Page = loader.load();
-            Stage stage = (Stage) done.getScene().getWindow();
-            Scene scene = new Scene(Connection2Page);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(6);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

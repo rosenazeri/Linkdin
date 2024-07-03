@@ -9,36 +9,37 @@ import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 
 public class Home {
     @FXML
-    private TextField Search;
+    TextField Search;
 
     @FXML
-    private Button Message;
+    Button Message;
 
     @FXML
-    private Button Profile;
+    Button Profile;
 
     @FXML
-    private TabPane tabPane;
+    TabPane tabPane;
 
     @FXML
-    private Tab jobsTab;
+    Tab jobsTab;
 
     @FXML
-    private Tab HomeTab;
+    Tab HomeTab;
 
     @FXML
-    private Tab PostTab;
+    Tab PostTab;
 
     @FXML
-    private Tab NotificationTab;
+    Tab NotificationTab;
 
     @FXML
-    private Tab NetworkTab;
+    Tab NetworkTab;
 
     @FXML
     private void initialize() {
@@ -53,14 +54,10 @@ public class Home {
 
     @FXML
     private void handleProfileButton() {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowProfile.fxml"));
-            AnchorPane homePage = loader.load();
-            Stage stage = (Stage) Profile.getScene().getWindow();
-            Scene scene = new Scene(homePage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(15);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -11,38 +11,36 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 
 public class Post{
     @FXML
-    private Button backButton;
+    Button backButton;
 
     @FXML
-    private TextArea captionTextArea;
+
+    TextArea captionTextArea;
 
     @FXML
-    private MenuButton displayStatusMenu;
+    MenuButton displayStatusMenu;
 
     @FXML
-    private Button mediaButton;
+    Button mediaButton;
 
     @FXML
-    private ImageView photoImageView;
+    ImageView photoImageView;
 
     @FXML
-    private Button postButton;
+    Button postButton;
 
     @FXML
     private void BackHandler(ActionEvent event) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-            AnchorPane PostPage = loader.load();
-            Stage stage = (Stage) backButton.getScene().getWindow();
-            Scene scene = new Scene(PostPage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(4);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

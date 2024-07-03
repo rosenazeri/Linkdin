@@ -8,43 +8,44 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
 import javafx.event.ActionEvent;
+import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 
 public class CertainJob {
-    private User user;
+     User user;
     @FXML
-    private Label Title;
+     Label Title;
     @FXML
-    private Label employmentType;
+     Label employmentType;
     @FXML
-    private Label company;
+     Label company;
     @FXML
-    private Label workPlace;
+     Label workPlace;
     @FXML
-    private Label TypeOfWorkPlace;
+     Label TypeOfWorkPlace;
     @FXML
-    private Label start;
+     Label start;
     @FXML
-    private Label finish;
+     Label finish;
     @FXML
-    private TextField jobtitleField;
+     TextField jobtitleField;
     @FXML
-    private ComboBox<String> employmentOption;
+     ComboBox<String> employmentOption;
     @FXML
-    private TextField companyField;
+     TextField companyField;
     @FXML
-    private TextField workPlaceField;
+     TextField workPlaceField;
     @FXML
-    private ComboBox<String> workPlaceOption;
+     ComboBox<String> workPlaceOption;
     @FXML
-    private DatePicker startDatePicker;
+     DatePicker startDatePicker;
     @FXML
-    private DatePicker endDatePicker;
+     DatePicker endDatePicker;
     @FXML
-    private Button nextButton;
+     Button nextButton;
     @FXML
-    private Button backButton;
+     Button backButton;
 
     public void initialize() {
         // You can initialize ComboBox options here if needed
@@ -94,14 +95,10 @@ public class CertainJob {
     }
     @FXML
     private void BackButtonClicked(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
-            AnchorPane CertainJobPage = loader.load();
-            Stage stage = (Stage) backButton.getScene().getWindow();
-            Scene scene = new Scene(CertainJobPage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(6);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

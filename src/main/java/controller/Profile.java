@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.User;
+import org.example.linkdin.HelloApplication;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -24,33 +25,33 @@ import static model.User.isValidImage;
 public class Profile {
 
     @FXML
-    private Button back;
+    Button back;
     @FXML
-    private AnchorPane root;
+    AnchorPane root;
 
     @FXML
-    private Label nameLabel;
+    Label nameLabel;
 
     @FXML
-    private TextField firstName;
+    TextField firstName;
 
     @FXML
-    private TextField lastName ;
+    TextField lastName ;
 
     @FXML
-    private TextField additionalName;
+    TextField additionalName;
 
     @FXML
-    private TextField email;
+    TextField email;
 
     @FXML
-    private Button imageButton;
+    Button imageButton;
 
     @FXML
-    private ImageView imageData;
+    ImageView imageData;
 
     @FXML
-    private Button nextButton;
+    Button nextButton;
 
     @FXML
     private void initialize() {
@@ -109,14 +110,10 @@ public class Profile {
     }
 
     public void backHandler(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-            AnchorPane ProfilePage = loader.load();
-            Stage stage = (Stage) back.getScene().getWindow();
-            Scene scene = new Scene(ProfilePage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(4);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

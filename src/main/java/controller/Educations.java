@@ -12,52 +12,53 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 
 public class Educations {
-    private User user;
+    User user;
     @FXML
-    private Button back;
+    Button back;
 
     @FXML
-    private Label academyLabel;
+    Label academyLabel;
 
     @FXML
-    private TextField academy;
+    TextField academy;
 
     @FXML
-    private Label fieldLabel;
+    Label fieldLabel;
 
     @FXML
-    private TextField field;
+    TextField field;
 
     @FXML
-    private Label startEducationLabel;
+    Label startEducationLabel;
 
     @FXML
-    private DatePicker startEducation;
+    DatePicker startEducation;
 
     @FXML
-    private Label finishEducationLabel;
+    Label finishEducationLabel;
 
     @FXML
-    private DatePicker finishEducation;
+    DatePicker finishEducation;
 
     @FXML
-    private Label gradeLabel;
+    Label gradeLabel;
 
     @FXML
-    private TextField grade;
+    TextField grade;
 
     @FXML
-    private Label activitiesLabel;
+    Label activitiesLabel;
 
     @FXML
-    private TextArea activities;
+    TextArea activities;
 
     @FXML
-    private Button next;
+    Button next;
 
     @FXML
     private void initialize() {
@@ -66,14 +67,10 @@ public class Educations {
 
     @FXML
     private void handleBackButtonAction(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));
-            AnchorPane EducationPage = loader.load();
-            Stage stage = (Stage) back.getScene().getWindow();
-            Scene scene = new Scene(EducationPage);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
+            m.changeScene(6);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
