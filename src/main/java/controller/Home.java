@@ -18,28 +18,28 @@ public class Home {
     TextField Search;
 
     @FXML
-    Button Message;
+    Button message;
 
     @FXML
-    Button Profile;
+    Button profile;
 
     @FXML
     TabPane tabPane;
 
     @FXML
-    Tab jobsTab;
+    Tab jobs;
 
     @FXML
-    Tab HomeTab;
+    Tab Home;
 
     @FXML
-    Tab PostTab;
+    Tab Post;
 
     @FXML
-    Tab NotificationTab;
+    Tab Notification;
 
     @FXML
-    Tab NetworkTab;
+    Tab Network;
 
     @FXML
     private void initialize() {
@@ -58,6 +58,11 @@ public class Home {
 
     @FXML
     private void handleMessageButton() {
-        // Handle message button action here
+        HelloApplication m = new HelloApplication();
+        try {
+            m.changeScene(14);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

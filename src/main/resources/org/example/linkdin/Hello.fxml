@@ -7,23 +7,23 @@
 
 <AnchorPane prefHeight="720" prefWidth="1280" style="-fx-background-color: #bfb8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomePage">
    <children>
-      <Label fx:id="welcome" alignment="TOP_CENTER" layoutX="474.0" layoutY="141.0" prefHeight="50.0" prefWidth="260.0" text="welcome : )" textFill="#1a00ff">
+      <Label fx:id="welcome" alignment="TOP_CENTER" layoutX="510.0" layoutY="142.0" prefHeight="50.0" prefWidth="260.0" text="welcome : )" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="40.0" />
          </font></Label>
-      <Label alignment="CENTER" layoutX="442.0" layoutY="230.0" prefHeight="23.0" prefWidth="323.0" text="if  you are oldy click on this =D" textFill="#1a00ff">
+      <Label alignment="CENTER" layoutX="478.0" layoutY="229.0" prefHeight="23.0" prefWidth="323.0" text="if  you are oldy click on this =D" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Label>
-      <Button layoutX="561.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleSignInAction" prefHeight="36.0" prefWidth="84.0" text="Sign in" textFill="#1a00ff">
+      <Button fx:id="SignIn" layoutX="598.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleSignInAction" prefHeight="36.0" prefWidth="84.0" text="Sign in" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Button>
-      <Label alignment="CENTER" layoutX="501.0" layoutY="371.0" prefHeight="18.0" prefWidth="203.0" text="else ,  click here *-*" textFill="#1a00ff">
+      <Label alignment="CENTER" layoutX="538.0" layoutY="371.0" prefHeight="18.0" prefWidth="203.0" text="else ,  click here *-*" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Label>
-      <Button layoutX="557.0" layoutY="439.0" mnemonicParsing="false" onAction="#handleSignUpAction" prefHeight="36.0" prefWidth="93.0" text="Sign up" textFill="#1a00ff">
+      <Button fx:id="SignUp" layoutX="593.0" layoutY="438.0" mnemonicParsing="false" onAction="#handleSignUpAction" prefHeight="36.0" prefWidth="93.0" text="Sign up" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Button>

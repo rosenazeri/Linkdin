@@ -34,7 +34,7 @@ public class Connection2 implements Initializable {
     TextArea ID;
 
     @FXML
-    Button done;
+    Button Done;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         birthshow.getItems().addAll("Only me" , "My followers" , "My connections" , "Everyone");

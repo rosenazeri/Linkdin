@@ -36,7 +36,7 @@
          </font></Label>
       <TextArea layoutX="480.0" layoutY="457.0" prefHeight="102.0" prefWidth="320.0" />
       <DatePicker fx:id="DateOfBirth" layoutX="551.0" layoutY="586.0" prefHeight="26.0" prefWidth="178.0" promptText="Date of birth" />
-      <Button layoutX="608.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleNextButtonAction" text="Next" textFill="#1a00ff">
+      <Button fx:id="next" layoutX="608.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleNextButtonAction" text="Next" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Button>

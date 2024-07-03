@@ -9,13 +9,13 @@ import org.example.linkdin.HelloApplication;
 
 public class WelcomePage {
     @FXML
-    private Label welcome;
+      Label welcome;
 
     @FXML
-    private Button signInButton;
+      Button SignIn;
 
     @FXML
-    private Button signUpButton;
+      Button SignUp;
 
     @FXML
     public void handleSignInAction(ActionEvent actionEvent) {

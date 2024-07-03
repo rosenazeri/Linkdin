@@ -28,7 +28,7 @@ public class ShowProfile {
      ImageView imageView2;
 
     @FXML
-     Button editProfileButton;
+     Button editProfile;
 
     @FXML
      Label NameAndLastname;
@@ -40,7 +40,7 @@ public class ShowProfile {
      ListView<Object> listView1;
 
     @FXML
-     Button backButton;
+     Button back;
 
     @FXML
      TabPane tabPane;

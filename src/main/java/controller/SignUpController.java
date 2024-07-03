@@ -19,6 +19,8 @@ import static model.User.isValidPassword;
 
 public class SignUpController {
     @FXML
+    Button back;
+    @FXML
     TextField firstName;
     @FXML
     TextField lastName;
@@ -112,4 +114,12 @@ public class SignUpController {
         return true;
     }
 
+    public void handleBackButtonAction(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
+        try {
+            m.changeScene(1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="720" prefWidth="1280" style="-fx-background-color: #bfb8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Profile2">
    <children>
-      <Button fx:id="Background" layoutX="582.0" layoutY="45.0" mnemonicParsing="false" onAction="#AddBackground" prefHeight="26.0" prefWidth="136.0" text="Add background" textFill="#1a00ff">
+      <Button fx:id="background" layoutX="582.0" layoutY="45.0" mnemonicParsing="false" onAction="#AddBackground" prefHeight="26.0" prefWidth="136.0" text="Add background" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></Button>
@@ -65,7 +65,7 @@
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></TextField>
-      <Button layoutX="546.0" layoutY="635.0" mnemonicParsing="false" onAction="#connectionButtonClicked" text="How to get Connection with me " textFill="#1a00ff">
+      <Button fx:id="connection" layoutX="546.0" layoutY="635.0" mnemonicParsing="false" onAction="#connectionButtonClicked" text="How to get Connection with me " textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></Button>

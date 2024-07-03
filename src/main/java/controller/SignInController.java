@@ -12,9 +12,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.example.linkdin.HelloApplication;
 
-import java.io.IOException;
 
 public class SignInController {
+    @FXML
+    Button back;
     @FXML
     Button signInButton;
     @FXML
@@ -48,6 +49,14 @@ public class SignInController {
                         e.printStackTrace();
                     }
             }
+        }
+    }
+    public void handleBackButtonAction(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
+        try {
+            m.changeScene(1);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

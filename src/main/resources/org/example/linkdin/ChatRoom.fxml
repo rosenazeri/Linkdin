@@ -1,32 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #bfb8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatRoom">
-   <children>
-      <Pane layoutY="-9.0" prefHeight="730.0" prefWidth="404.0" style="-fx-background-color: #cec8ff;">
+<BorderPane fx:id="borderPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatRoom">
+   <center>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #eceaff;">
          <children>
-            <Label layoutX="177.0" layoutY="71.0" text="Chats" textFill="#1a00ff">
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="496.0" vbarPolicy="ALWAYS" vmin="1.0" vvalue="1.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <ListView fx:id="chatPaneListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eceaff0baff;" />
+               </content>
+            </ScrollPane>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" style="-fx-background-color: #eceaff;" VBox.vgrow="NEVER">
+               <children>
+                  <TextArea fx:id="messageBoxTextArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#sendMethod" prefHeight="36.0" prefWidth="698.0" promptText="Enter Message..." scaleShape="false" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Lucida Bright" size="18.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="sendButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendBtnAction" prefHeight="43.0" prefWidth="142.0" scaleShape="false" text="Send" textAlignment="CENTER" textFill="#1a00ff" HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="Lucida Bright" size="18.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </VBox>
+   </center>
+   <left>
+      <VBox maxHeight="1.7976931348623157E308" style="-fx-background-color: #cec8ff;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="onlineUsersHbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="217.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="154.0" text="Online Users:" textAlignment="CENTER" textFill="#1a00ff">
+                     <font>
+                        <Font name="Lucida Bright" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="userCountLabel" alignment="CENTER" prefHeight="48.0" prefWidth="94.0" text="0" textFill="#1a00ff">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Lucida Bright" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="userListView" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="546.0" prefWidth="290.0" style="-fx-background-color: #eceaff;">
+            </ListView>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #bfb8ff;" BorderPane.alignment="CENTER">
+         <left>
+            <HBox prefWidth="259.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <Label fx:id="otherUserNameLabel" prefHeight="76.0" prefWidth="400.0" text="Welcom to ChatRoom" textFill="#1a00ff" BorderPane.alignment="CENTER">
                <font>
-                  <Font name="Lucida Bright" size="18.0" />
+                  <Font name="Lucida Bright Demibold" size="36.0" />
                </font>
             </Label>
-            <TextField fx:id="Search" alignment="CENTER" layoutX="52.0" layoutY="102.0" onAction="#SearchHandler" prefHeight="25.0" prefWidth="299.0" promptText="Search">
-               <font>
-                  <Font name="Lucida Bright" size="12.0" />
-               </font>
-            </TextField>
-         </children>
-      </Pane>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="68.0" text="Back" textFill="#1a00ff">
-         <font>
-            <Font name="Lucida Bright" size="18.0" />
-         </font>
-      </Button>
-   </children>
-</AnchorPane>
+         </center>
+      </BorderPane>
+   </top>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</BorderPane>

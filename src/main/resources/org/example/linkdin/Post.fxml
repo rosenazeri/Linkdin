@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="608.0" prefWidth="1259.0" style="-fx-background-color: #cec8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="608.0" prefWidth="1259.0" style="-fx-background-color: #cec8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Post">
    <children>
       <TextArea layoutX="337.0" layoutY="25.0" prefHeight="206.0" prefWidth="594.0" promptText="Caption">
          <opaqueInsets>
@@ -19,7 +19,7 @@
             <Font name="Lucida Bright" size="15.0" />
          </font>
       </TextArea>
-      <MenuButton layoutX="756.0" layoutY="241.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="174.0" text="Display Status" textFill="#1a00ff">
+      <MenuButton fx:id="Status" layoutX="756.0" layoutY="241.0" mnemonicParsing="false" onAction="#statusHandler" prefHeight="29.0" prefWidth="174.0" text="Display Status" textFill="#1a00ff">
          <items>
             <MenuItem mnemonicParsing="false" text="Action 1" />
             <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -28,13 +28,13 @@
             <Font name="Lucida Bright" size="15.0" />
          </font>
       </MenuButton>
-      <Button fx:id="media" layoutX="337.0" layoutY="241.0" mnemonicParsing="false" text="Media" textFill="#1a00ff">
+      <Button fx:id="media" layoutX="337.0" layoutY="241.0" mnemonicParsing="false" onAction="#mediaHandler" text="Media" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="15.0" />
          </font>
       </Button>
       <ImageView fx:id="Photo" fitHeight="328.0" fitWidth="594.0" layoutX="337.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: ;" />
-      <Button fx:id="post" layoutX="1151.0" layoutY="25.0" mnemonicParsing="false" text="Post" textFill="#1a00ff">
+      <Button fx:id="post" layoutX="1151.0" layoutY="25.0" mnemonicParsing="false" onAction="#postHandler" text="Post" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font>

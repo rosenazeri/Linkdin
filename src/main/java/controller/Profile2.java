@@ -29,21 +29,21 @@ import static model.User.isValidBackground;
 public class Profile2 {
     User user;
     @FXML
-    Button backgroundButton;
+    Button background;
     @FXML
-    Button backButton;
+    Button back;
     @FXML
     Button certainJobButton ;
 
     @FXML
-    Button nextButton;
+    Button next;
 
     @FXML
     Button educationButton;
     @FXML
-    Button connectionButton;
+    Button connection;
     @FXML
-    ImageView background ;
+    ImageView Background ;
     @FXML
     Label Biography ;
 
@@ -101,7 +101,7 @@ public class Profile2 {
             industryTextField.setStyle("-fx-border-color: red;");
             return ;
         }
-       Image image = background.getImage();
+       Image image = Background.getImage();
         if (image == null || ((Image) image).isError()) {
             background.setStyle("-fx-border-color: red;");
             return;

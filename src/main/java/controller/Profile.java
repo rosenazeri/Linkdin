@@ -25,7 +25,7 @@ import static model.User.isValidImage;
 public class Profile {
 
     @FXML
-    Button back;
+    Button Back;
     @FXML
     AnchorPane root;
 
@@ -45,7 +45,7 @@ public class Profile {
     TextField email;
 
     @FXML
-    Button imageButton;
+    Button image;
 
     @FXML
     ImageView imageData;

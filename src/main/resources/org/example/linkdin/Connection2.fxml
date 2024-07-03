@@ -23,7 +23,7 @@
             <Font name="Lucida Bright" size="12.0" />
          </font></Label>
       <TextArea fx:id="ID" layoutX="494.0" layoutY="238.0" prefHeight="110.0" prefWidth="291.0" />
-      <Button layoutX="603.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleDoneButtonAction" prefHeight="36.0" prefWidth="73.0" text="Done" textFill="#1a00ff">
+      <Button fx:id="Done" layoutX="603.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleDoneButtonAction" prefHeight="36.0" prefWidth="73.0" text="Done" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Button>

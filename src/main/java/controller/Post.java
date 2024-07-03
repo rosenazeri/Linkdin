@@ -17,26 +17,22 @@ import java.io.IOException;
 
 public class Post{
     @FXML
-    Button backButton;
-
-    @FXML
 
     TextArea captionTextArea;
 
     @FXML
-    MenuButton displayStatusMenu;
+    MenuButton Status;
 
     @FXML
-    Button mediaButton;
+    Button media;
 
     @FXML
     ImageView photoImageView;
 
     @FXML
-    Button postButton;
+    Button post;
 
     @FXML
-<<<<<<< HEAD
     private void BackHandler(ActionEvent event) {
         HelloApplication m = new HelloApplication();
         try {
@@ -47,8 +43,6 @@ public class Post{
     }
 
     @FXML
-=======
->>>>>>> b4616ea29c91ed9a0e07c7e7d9a6f957c6830be4
     private void mediaHandler(ActionEvent event) {
         // Handle media upload action
     }
@@ -56,6 +50,9 @@ public class Post{
     @FXML
     private void postHandler(ActionEvent event) {
         // Handle post creation action
+    }
+
+    public void statusHandler(ActionEvent actionEvent) {
     }
 
     // Add other methods as needed for additional functionality

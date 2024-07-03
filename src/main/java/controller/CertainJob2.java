@@ -22,7 +22,7 @@ public class CertainJob2 {
       User user;
 
     @FXML
-      Button BackButton;
+      Button Back;
 
     @FXML
       TextArea Explanation;

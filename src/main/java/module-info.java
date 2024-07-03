@@ -15,4 +15,6 @@ module org.example.linkdin {
 
     opens org.example.linkdin to javafx.fxml;
     exports org.example.linkdin;
+    exports controller;
+    opens controller;
 }
