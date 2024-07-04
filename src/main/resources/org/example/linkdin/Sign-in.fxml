@@ -17,7 +17,7 @@
          <font>
             <Font name="Lucida Bright" size="20.0" />
          </font></Button>
-      <Label alignment="CENTER" layoutX="536.0" layoutY="153.0" prefHeight="23.0" prefWidth="205.0" text="your email address :" textFill="#1a00ff">
+      <Label alignment="CENTER" layoutX="525.0" layoutY="141.0" prefHeight="23.0" prefWidth="228.0" text="your email or Username :" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Label>

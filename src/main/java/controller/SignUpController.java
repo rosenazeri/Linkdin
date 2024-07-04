@@ -21,6 +21,8 @@ public class SignUpController {
     @FXML
     Button back;
     @FXML
+    TextField UserName ;
+    @FXML
     TextField firstName;
     @FXML
     TextField lastName;
@@ -47,7 +49,7 @@ public class SignUpController {
         if (!isValidInput()) {
 
         } else {
-            User user = new User(firstName.getText(), lastName.getText(), null, email.getText(), password1.getText(), null
+            User user = new User(UserName.getText(), firstName.getText(), lastName.getText(), null, email.getText(), password1.getText(), null
                     , null, null, null, null, null, null, null);
 
             boolean isDuplicateEmail = false;
@@ -72,6 +74,12 @@ public class SignUpController {
         }
     }
     private boolean isValidInput() {
+        if (UserName.getText().isEmpty()) {
+            UserName.setStyle("-fx-border-color: red;");
+            return false;
+        }
+        else
+            UserName.setStyle("");
         if (firstName.getText().isEmpty()) {
             firstName.setStyle("-fx-border-color: red;");
             return false;

@@ -31,6 +31,8 @@ public class Profile {
 
     @FXML
     Label nameLabel;
+    @FXML
+    TextField UserName;
 
     @FXML
     TextField firstName;
@@ -95,7 +97,7 @@ public class Profile {
             e.printStackTrace();
         }
 
-        User user = new User(firstName.getText(), lastName.getText(), additionalName.getText(), email.getText(), null, imageData, null, null, null, null, null, null, null);
+        User user = new User(UserName.getText(), firstName.getText(), lastName.getText(), additionalName.getText(), email.getText(), null, imageData, null, null, null, null, null, null, null);
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));

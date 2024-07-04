@@ -31,7 +31,7 @@ public class SignInController {
         String password = passwordField.getText();
         User newUser = null;
         for (User user : User.userData) {
-            if (user.getEmail().equals(email)) {
+            if (user.getEmail().equals(email) || user.getUserName().equals(email)) {
                 newUser = user;
                 break;
             }

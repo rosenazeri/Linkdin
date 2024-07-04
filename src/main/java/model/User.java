@@ -13,7 +13,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 public class User {
-
+    private String userName ;
     private String firstName;
     private String lastName;
     private String aditionalName;
@@ -28,7 +28,8 @@ public class User {
     private Location location;
     private Connection connection ;
 
-    public User(String firstName, String lastName, String aditionalName, String email, String password, ImageView imageData, ImageView background, String biography, CertainJobs job, String industry, Education education, Location location, Connection connection) {
+    public User(String userName, String firstName, String lastName, String aditionalName, String email, String password, ImageView imageData, ImageView background, String biography, CertainJobs job, String industry, Education education, Location location, Connection connection) {
+        this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.aditionalName = aditionalName;
@@ -42,6 +43,14 @@ public class User {
         this.education = education;
         this.location = location;
         this.connection = connection;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getFirstName() {
@@ -65,7 +74,7 @@ public class User {
     }
 
     public void setAditionalName(String aditionalName) {
-        aditionalName = aditionalName;
+        this.aditionalName = aditionalName;
     }
 
     public String getEmail() {
@@ -147,15 +156,6 @@ public class User {
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
-
-    public static ArrayList<User> getUserData() {
-        return userData;
-    }
-
-    public static void setUserData(ArrayList<User> userData) {
-        User.userData = userData;
-    }
-
     public static ArrayList <User> userData = new ArrayList<>();
     public static boolean isValidNameAndLastname(String name){
         return name.matches("[a-zA-Z]+"); }

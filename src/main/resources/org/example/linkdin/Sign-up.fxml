@@ -13,49 +13,59 @@
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Button>
-      <TextField fx:id="firstName" alignment="CENTER" layoutX="497.0" layoutY="106.0" prefHeight="26.0" prefWidth="285.0" promptText="First Name">
+      <TextField fx:id="firstName" alignment="CENTER" layoutX="495.0" layoutY="184.0" prefHeight="26.0" prefWidth="285.0" promptText="First Name">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></TextField>
-      <TextField fx:id="lastName" alignment="CENTER" layoutX="496.0" layoutY="186.0" prefHeight="26.0" prefWidth="286.0" promptText="Last Name">
+      <TextField fx:id="lastName" alignment="CENTER" layoutX="496.0" layoutY="285.0" prefHeight="26.0" prefWidth="286.0" promptText="Last Name">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></TextField>
-      <TextField fx:id="Email" alignment="CENTER" layoutX="496.0" layoutY="270.0" prefHeight="26.0" prefWidth="286.0" promptText="Email">
+      <TextField fx:id="Email" alignment="CENTER" layoutX="496.0" layoutY="380.0" prefHeight="26.0" prefWidth="286.0" promptText="Email">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></TextField>
-      <Label alignment="CENTER" layoutX="596.0" layoutY="322.0" prefHeight="18.0" prefWidth="88.0" text="Set password :" textFill="#1a00ff">
+      <Label alignment="CENTER" layoutX="596.0" layoutY="429.0" prefHeight="18.0" prefWidth="88.0" text="Set password :" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></Label>
-      <Label fx:id="Firstname" alignment="CENTER" contentDisplay="TOP" layoutX="600.0" layoutY="71.0" prefHeight="18.0" prefWidth="80.0" text="First Name :" textFill="#1a00ff">
+      <Label fx:id="Firstname" alignment="CENTER" contentDisplay="TOP" layoutX="600.0" layoutY="134.0" prefHeight="18.0" prefWidth="80.0" text="First Name :" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></Label>
-      <Label alignment="CENTER" layoutX="591.0" layoutY="150.0" prefHeight="18.0" prefWidth="98.0" text="Last Name :" textFill="#1a00ff">
+      <Label alignment="CENTER" layoutX="591.0" layoutY="237.0" prefHeight="18.0" prefWidth="98.0" text="Last Name :" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></Label>
-      <Label alignment="CENTER" layoutX="619.0" layoutY="233.0" prefHeight="18.0" prefWidth="42.0" text="Email :" textFill="#1a00ff">
+      <Label alignment="CENTER" layoutX="617.0" layoutY="334.0" prefHeight="18.0" prefWidth="42.0" text="Email :" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></Label>
-      <Label alignment="CENTER" layoutX="582.0" layoutY="413.0" prefHeight="18.0" prefWidth="114.0" text="Repeat password :" textFill="#1a00ff">
+      <Label alignment="CENTER" layoutX="583.0" layoutY="526.0" prefHeight="18.0" prefWidth="114.0" text="Repeat password :" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></Label>
-      <Button fx:id="done" layoutX="595.0" layoutY="522.0" mnemonicParsing="false" onAction="#handleDone" prefHeight="26.0" prefWidth="88.0" text="Done" textFill="#1a00ff">
+      <Button fx:id="done" layoutX="595.0" layoutY="628.0" mnemonicParsing="false" onAction="#handleDone" prefHeight="26.0" prefWidth="88.0" text="Done" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
          </font></Button>
-      <PasswordField fx:id="password" alignment="CENTER" layoutX="496.0" layoutY="360.0" prefHeight="26.0" prefWidth="286.0" promptText="password">
+      <PasswordField fx:id="password" alignment="CENTER" layoutX="496.0" layoutY="476.0" prefHeight="26.0" prefWidth="286.0" promptText="password">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></PasswordField>
-      <PasswordField fx:id="password2" alignment="CENTER" layoutX="496.0" layoutY="450.0" prefHeight="26.0" prefWidth="286.0" promptText="password">
+      <PasswordField fx:id="password2" alignment="CENTER" layoutX="496.0" layoutY="571.0" prefHeight="26.0" prefWidth="286.0" promptText="password">
          <font>
             <Font name="Lucida Bright" size="12.0" />
          </font></PasswordField>
+      <Label fx:id="Firstname1" alignment="CENTER" contentDisplay="TOP" layoutX="599.0" layoutY="43.0" prefHeight="18.0" prefWidth="80.0" text="User name :" textFill="#1a00ff">
+         <font>
+            <Font name="Lucida Bright" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="UserName" alignment="CENTER" layoutX="496.0" layoutY="83.0" prefHeight="26.0" prefWidth="285.0" promptText="User name">
+         <font>
+            <Font name="Lucida Bright" size="12.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -47,9 +48,6 @@ public class Home2 {
 
     }
 
-    public void SendHandler() {
-        // Handle send button action
-
+    public void ShowCommentHandler(ActionEvent actionEvent) {
     }
-
 }

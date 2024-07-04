@@ -31,12 +31,12 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <Label fx:id="NameAndLastname" layoutX="464.0" layoutY="255.0" prefHeight="30.0" prefWidth="426.0" text="name and lastname" textFill="#1a00ff">
+        <Label fx:id="nameAndLastname" layoutX="464.0" layoutY="255.0" prefHeight="30.0" prefWidth="426.0" text="name and lastname" textFill="#1a00ff">
             <font>
                 <Font name="Lucida Bright" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="Biography" layoutX="464.0" layoutY="292.0" prefHeight="30.0" prefWidth="623.0" text="Biography" textFill="#1a00ff">
+        <Label fx:id="biography" layoutX="464.0" layoutY="292.0" prefHeight="30.0" prefWidth="623.0" text="Biography" textFill="#1a00ff">
             <font>
                 <Font name="Lucida Bright" size="18.0" />
             </font>
