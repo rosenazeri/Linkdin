@@ -20,4 +20,7 @@ public class ChatRoom {
 
     public void YourTextHandler(ActionEvent actionEvent) {
     }
+
+    public void messageHandler(ActionEvent actionEvent) {
+    }
 }

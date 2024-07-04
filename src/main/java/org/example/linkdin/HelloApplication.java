@@ -19,9 +19,7 @@ import java.util.Map;
 public class HelloApplication extends Application {
     private static Stage stg;
     private static Scene MainMenu;
-    public static User user = new User("Rose" , "Nazeri" , "Rosiiiw" , "rosenazeri83@gmail.com",
-            "Rose2005",null,null , "20 years old" , null , "math"
-    , null, null , null);
+
     @Override
     public void start(Stage stage) {
         try {
