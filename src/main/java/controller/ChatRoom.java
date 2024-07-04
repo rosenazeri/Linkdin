@@ -1,11 +1,13 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -108,5 +110,17 @@ public class ChatRoom {
         // Clear messageTextField after sending message
         TextField messageTextField = (TextField) ((HBox) centerVBox.getChildren().get(1)).getChildren().get(0);
         messageTextField.clear();
+    }
+
+    public void YourTextHandler(ActionEvent actionEvent) {
+    }
+
+    public void MyTextHandler(ActionEvent actionEvent) {
+    }
+
+    public void sendMethod(KeyEvent keyEvent) {
+    }
+
+    public void sendBtnAction(ActionEvent actionEvent) {
     }
 }

@@ -49,7 +49,7 @@ public class CertainJob implements Initializable {
      Button nextButton;
     @FXML
      Button backButton;
-@Override
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
         // You can initialize ComboBox options here if needed
         employmentOption.getItems().addAll("full time", "part time", "self employment", "freelance",

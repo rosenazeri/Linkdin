@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -38,7 +39,7 @@ public class Home2 {
 
         Button followButton = new Button("Follow");
         followButton.setStyle("-fx-text-fill: #1e00ff; -fx-font-size: 15.0; -fx-font-family: 'Lucida Bright';");
-        followButton.setOnAction(event -> followHandler()); // Implement followHandler method
+       // followButton.setOnAction(event -> followHandler());  Implement followHandler method
         HBox.setMargin(followButton, new javafx.geometry.Insets(0, 0, 0, 340)); // Adjust margins as needed
         HBox usernameFollowBox = new HBox(usernameBox, followButton);
 
@@ -52,14 +53,14 @@ public class Home2 {
 
         Button likeButton = new Button("♥");
         likeButton.setStyle("-fx-text-fill: #ff0000; -fx-font-size: 18.0; -fx-font-family: 'Yu Gothic UI Regular';");
-        likeButton.setOnAction(event -> likeHandler()); // Implement likeHandler method
+    //    likeButton.setOnAction(event -> likeHandler());  Implement likeHandler method
 
         TextField commentField = new TextField();
         commentField.setPromptText("Comment");
 
         Button showCommentButton = new Button("Show");
         showCommentButton.setStyle("-fx-text-fill: #1e00ff; -fx-font-size: 15.0; -fx-font-family: 'Lucida Bright';");
-        showCommentButton.setOnAction(event -> showCommentHandler()); // Implement showCommentHandler method
+        // showCommentButton.setOnAction(event -> showCommentHandler());  Implement showCommentHandler method
 
         HBox interactionBox = new HBox(10, likeButton, commentField, showCommentButton);
         interactionBox.setPadding(new javafx.geometry.Insets(5, 40, 20, 40));
@@ -74,7 +75,8 @@ public class Home2 {
     }
 
     // Example action methods (implement as needed)
-    private void likeHandler() {
+    @FXML
+    private void likeHandler(ActionEvent actionEvent) {
         Button likeButton = (Button) anchorPane.lookup("#Like"); // Get the Like button by its ID
 
         if (!likeState) { // If not liked (blue)
@@ -86,11 +88,18 @@ public class Home2 {
         }
     }
 
-    private void followHandler() {
+    @FXML
+    private void followHandler(ActionEvent actionEvent) {
         // Implement logic for follow button click
     }
 
-    private void showCommentHandler() {
+    @FXML
+    private void showCommentHandler(ActionEvent actionEvent) {
         // Implement logic for show comment button click
+    }
+
+
+    public void commentHandler(ActionEvent actionEvent) {
+
     }
 }

@@ -50,7 +50,7 @@
                                                 <Font name="Lucida Bright" size="15.0" />
                                              </font>
                                           </Label>
-                                          <Button fx:id="follow" mnemonicParsing="false" onAction="#FollowHandler" text="Follow" textFill="#1e00ff">
+                                          <Button fx:id="follow" mnemonicParsing="false" onAction="#followHandler" text="Follow" textFill="#1e00ff">
                                              <HBox.margin>
                                                 <Insets left="340.0" top="17.0" />
                                              </HBox.margin>
@@ -87,7 +87,7 @@
                                  <children>
                                     <HBox prefHeight="38.0" prefWidth="627.0">
                                        <children>
-                                          <Button fx:id="Like" mnemonicParsing="false" onAction="#LikeHandler" text="♥" textFill="#1e00ff">
+                                          <Button fx:id="Like" mnemonicParsing="false" onAction="#likeHandler" text="♥" textFill="#1e00ff">
                                              <HBox.margin>
                                                 <Insets bottom="20.0" left="40.0" top="5.0" />
                                              </HBox.margin>
@@ -95,12 +95,12 @@
                                                 <Font name="Yu Gothic UI Regular" size="18.0" />
                                              </font>
                                           </Button>
-                                          <TextField fx:id="comment" alignment="CENTER" onAction="#CommentHandler" prefHeight="26.0" prefWidth="420.0" promptText="Comment">
+                                          <TextField fx:id="comment" alignment="CENTER" onAction="#commentHandler" prefHeight="26.0" prefWidth="420.0" promptText="Comment">
                                              <HBox.margin>
                                                 <Insets left="10.0" top="10.0" />
                                              </HBox.margin>
                                           </TextField>
-                                          <Button fx:id="showCM" mnemonicParsing="false" onAction="#ShowCommentHandler" prefHeight="40.0" prefWidth="61.0" text="Show" textFill="#1e00ff">
+                                          <Button fx:id="showCM" mnemonicParsing="false" onAction="#showCommentHandler" prefHeight="40.0" prefWidth="61.0" text="Show" textFill="#1e00ff">
                                              <font>
                                                 <Font name="Lucida Bright" size="15.0" />
                                              </font>

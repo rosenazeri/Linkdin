@@ -33,7 +33,7 @@
             <Font name="Lucida Bright" size="15.0" />
          </font>
       </Button>
-      <ImageView fx:id="Photo" fitHeight="328.0" fitWidth="594.0" layoutX="337.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: ;" />
+      <ImageView fx:id="Photo" fitHeight="328.0" fitWidth="594.0" layoutX="337.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="post" layoutX="1151.0" layoutY="25.0" mnemonicParsing="false" onAction="#postHandler" text="Post" textFill="#1a00ff">
          <font>
             <Font name="Lucida Bright" size="18.0" />
