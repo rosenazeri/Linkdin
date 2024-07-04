@@ -27,8 +27,10 @@ public class User {
     private Education education;
     private Location location;
     private Connection connection ;
+    private int follower ;
+    private int following ;
 
-    public User(String userName, String firstName, String lastName, String aditionalName, String email, String password, ImageView imageData, ImageView background, String biography, CertainJobs job, String industry, Education education, Location location, Connection connection) {
+    public User(String userName, String firstName, String lastName, String aditionalName, String email, String password, ImageView imageData, ImageView background, String biography, CertainJobs job, String industry, Education education, Location location, Connection connection, int follower, int following) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -43,6 +45,8 @@ public class User {
         this.education = education;
         this.location = location;
         this.connection = connection;
+        this.follower = follower;
+        this.following = following;
     }
 
     public String getUserName() {
@@ -156,6 +160,31 @@ public class User {
     public void setConnection(Connection connection) {
         this.connection = connection;
     }
+
+    public int getFollower() {
+        return follower;
+    }
+
+    public void setFollower(int follower) {
+        this.follower = follower;
+    }
+
+    public int getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(int following) {
+        this.following = following;
+    }
+
+    public static ArrayList<model.User> getUserData() {
+        return userData;
+    }
+
+    public static void setUserData(ArrayList<model.User> userData) {
+        User.userData = userData;
+    }
+
     public static ArrayList <User> userData = new ArrayList<>();
     public static boolean isValidNameAndLastname(String name){
         return name.matches("[a-zA-Z]+"); }
@@ -207,4 +236,5 @@ public class User {
     public String toString(){
         return firstName + " " + lastName ;
     }
+
 }

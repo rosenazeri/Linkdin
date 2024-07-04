@@ -12,11 +12,19 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import model.User;
 import org.example.linkdin.HelloApplication;
 
 import java.io.IOException;
 
 public class ShowProfile {
+    User user;
+    @FXML
+    Label num1;
+    @FXML
+    Label num2 ;
+    @FXML
+    Label num3;
 
     @FXML
      AnchorPane Name;
@@ -61,7 +69,9 @@ public class ShowProfile {
      Tab companiesTab;
 
     public void initialize() {
-        // Add initialization logic here
+       num1.setText(String.valueOf(user.getFollower()));
+       num2.setText(String.valueOf(user.getFollowing()));
+       num3.setText(String.valueOf(user.getConnection()));
     }
 
     public void backHandler(ActionEvent actionEvent) {
@@ -83,6 +93,7 @@ public class ShowProfile {
     }
 
     public void showingFollowers(ActionEvent actionEvent) {
+
     }
 
     public void ShowFollowing(ActionEvent actionEvent) {

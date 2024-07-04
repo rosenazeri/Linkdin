@@ -97,7 +97,7 @@ public class Profile {
             e.printStackTrace();
         }
 
-        User user = new User(UserName.getText(), firstName.getText(), lastName.getText(), additionalName.getText(), email.getText(), null, imageData, null, null, null, null, null, null, null);
+        User user = new User(UserName.getText(), firstName.getText(), lastName.getText(), additionalName.getText(), email.getText(), null, imageData, null, null, null, null, null, null, null , 0, 0);
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile2.fxml"));

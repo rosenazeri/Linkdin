@@ -50,7 +50,7 @@ public class SignUpController {
 
         } else {
             User user = new User(UserName.getText(), firstName.getText(), lastName.getText(), null, email.getText(), password1.getText(), null
-                    , null, null, null, null, null, null, null);
+                    , null, null, null, null, null, null, null , 0 ,0);
 
             boolean isDuplicateEmail = false;
             for (User existingUser : userData) {
