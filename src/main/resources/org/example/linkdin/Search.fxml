@@ -9,7 +9,7 @@
 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1118.0" style="-fx-background-color: #cec8ff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controller.Search">
     <children>
         <TextField fx:id="Search" alignment="CENTER" layoutX="111.0" layoutY="1.0" onAction="#SearchHandler" prefHeight="26.0" prefWidth="896.0" promptText="Search" />
-        <TableView layoutX="111.0" layoutY="49.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="568.0" prefWidth="895.0" style="-fx-background-color: #4530ff;">
+        <TableView layoutX="111.0" layoutY="49.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="568.0" prefWidth="895.0" style="-fx-background-color: #e2dfff;">
             <columns>
                 <TableColumn minWidth="9.0" prefWidth="110.0" text="Name" />
                 <TableColumn minWidth="0.0" prefWidth="110.0" text="Lastname" />

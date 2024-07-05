@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import model.Post;
+import org.example.linkdin.HelloApplication;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,36 @@ public class Home2 {
 
     @FXML
     VBox mainVBox;
+
+    @FXML
+     ImageView image;
+
+    @FXML
+     Label UserName;
+
+    @FXML
+     Button follow;
+
+    @FXML
+     ImageView ImageMedia;
+
+    @FXML
+     Label Caption;
+
+    @FXML
+     Label likesNum;
+
+    @FXML
+     Button Like;
+
+    @FXML
+     Button ShowLikes;
+
+    @FXML
+     TextField comment;
+
+    @FXML
+     Button showCM;
     public void addNewPost(String imageUrl, String userName, String caption) {
         ImageView imageView = new ImageView(new Image(imageUrl));
         imageView.setFitWidth(406);
@@ -95,11 +126,25 @@ public class Home2 {
 
     @FXML
     private void showCommentHandler(ActionEvent actionEvent) {
-        // Implement logic for show comment button click
+        HelloApplication m = new HelloApplication();
+        try {
+            m.changeScene(17);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
     public void commentHandler(ActionEvent actionEvent) {
 
+    }
+
+    public void ShowLikesHandler(ActionEvent actionEvent) {
+        HelloApplication m = new HelloApplication();
+        try {
+            m.changeScene(18);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

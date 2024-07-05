@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="1259.0" style="-fx-background-color: #4530ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home2">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="1259.0" style="-fx-background-color: #cec8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home2">
    <children>
       <ScrollPane layoutX="146.0" layoutY="3.0" prefHeight="602.0" prefWidth="965.0">
         <content>
@@ -22,7 +22,7 @@
                <children>
                   <VBox prefHeight="589.0" prefWidth="946.0">
                      <children>
-                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="459.0" prefWidth="627.0" style="-fx-background-color: #4530ff;">
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="459.0" prefWidth="627.0" style="-fx-background-color: #cec8ff;">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -30,7 +30,7 @@
                               <Cursor fx:constant="DEFAULT" />
                            </cursor>
                            <children>
-                              <HBox prefHeight="50.0" prefWidth="626.0" style="-fx-background-color: #03001b;">
+                              <HBox prefHeight="50.0" prefWidth="626.0" style="-fx-background-color: #bfb8ff;">
                                  <children>
                                     <ImageView fx:id="image" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                                        <HBox.margin>
@@ -40,7 +40,7 @@
                                           <Image url="@../../../../../../507CE114-3209-4DD9-B9DE-7DEDDD782F0D.jpg" />
                                        </image>
                                     </ImageView>
-                                    <HBox prefHeight="66.0" prefWidth="681.0" style="-fx-background-color: #03001b;">
+                                    <HBox prefHeight="66.0" prefWidth="681.0" style="-fx-background-color: #bfb8ff;">
                                        <children>
                                           <Label fx:id="UserName" text="User name " textFill="#1e00ff">
                                              <HBox.margin>
@@ -75,7 +75,7 @@
                                     <Font name="Lucida Bright" size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="likesNum" text="Likes" textFill="#1e00ff">
+                              <Label fx:id="likesNum" prefHeight="30.0" prefWidth="519.0" text="Likes" textFill="#1e00ff">
                                  <font>
                                     <Font name="Lucida Bright" size="15.0" />
                                  </font>
@@ -87,25 +87,33 @@
                                  <children>
                                     <HBox prefHeight="38.0" prefWidth="627.0">
                                        <children>
-                                          <Button fx:id="Like" mnemonicParsing="false" onAction="#likeHandler" text="♥" textFill="#1e00ff">
+                                          <Button fx:id="Like" mnemonicParsing="false" onAction="#likeHandler" prefHeight="40.0" prefWidth="46.0" text="♥" textFill="#1e00ff">
                                              <HBox.margin>
-                                                <Insets bottom="20.0" left="40.0" top="5.0" />
+                                                <Insets bottom="20.0" left="5.0" top="5.0" />
                                              </HBox.margin>
                                              <font>
                                                 <Font name="Yu Gothic UI Regular" size="18.0" />
                                              </font>
                                           </Button>
-                                          <TextField fx:id="comment" alignment="CENTER" onAction="#commentHandler" prefHeight="26.0" prefWidth="420.0" promptText="Comment">
+                                          <Button fx:id="ShowLikes" mnemonicParsing="false" onAction="#ShowLikesHandler" prefHeight="23.0" prefWidth="86.0" text="show Likes" textFill="#1e00ff">
+                                             <font>
+                                                <Font name="Lucida Bright" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="13.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <TextField fx:id="comment" alignment="CENTER" onAction="#commentHandler" prefHeight="26.0" prefWidth="352.0" promptText="Comment">
                                              <HBox.margin>
                                                 <Insets left="10.0" top="10.0" />
                                              </HBox.margin>
                                           </TextField>
-                                          <Button fx:id="showCM" mnemonicParsing="false" onAction="#showCommentHandler" prefHeight="40.0" prefWidth="61.0" text="Show" textFill="#1e00ff">
+                                          <Button fx:id="showCM" mnemonicParsing="false" onAction="#showCommentHandler" prefHeight="23.0" prefWidth="116.0" text="Show Comments" textFill="#1e00ff">
                                              <font>
-                                                <Font name="Lucida Bright" size="15.0" />
+                                                <Font name="Lucida Bright" size="12.0" />
                                              </font>
                                              <HBox.margin>
-                                                <Insets bottom="20.0" left="10.0" top="5.0" />
+                                                <Insets bottom="20.0" left="10.0" right="3.0" top="13.0" />
                                              </HBox.margin>
                                           </Button>
                                        </children>

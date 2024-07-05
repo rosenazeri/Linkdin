@@ -92,6 +92,13 @@ public class WelcomePage {
         replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\ChatRoom.fxml", "#cec8ff" , "#4530ff");
         replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\ChatRoom.fxml", "#dedeff" , "#3f3fff");
         replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\ChatRoom.fxml", "#ffffff" , "#000000");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\commentView.fxml", "#bfb8ff" , "#03001b");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\commentView.fxml", "#dedeff" , "#4530ff");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\commentView.fxml", "#ffffff" , "#000000");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\LikeView.fxml", "#bfb8ff" , "#03001b");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\LikeView.fxml", "#dedeff" , "#4530ff");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\LikeView.fxml", "#ffffff" , "#000000");
+
     }
     public void LightHandler(ActionEvent actionEvent) {
         replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\Hello.fxml", "#03001b", "#bfb8ff" );
@@ -120,5 +127,12 @@ public class WelcomePage {
         replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\ChatRoom.fxml", "#4530ff", "#cec8ff" );
         replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\ChatRoom.fxml", "#3f3fff", "#dedeff" );
         replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\ChatRoom.fxml", "#000000", "#ffffff" );
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\commentView.fxml" , "#03001b", "#bfb8ff");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\commentView.fxml", "#4530ff", "#dedeff" );
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\commentView.fxml" , "#000000", "#ffffff");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\LikeView.fxml" , "#03001b", "#bfb8ff");
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\LikeView.fxml", "#4530ff", "#dedeff" );
+        replaceTextInFXML("src\\main\\resources\\org\\example\\linkdin\\LikeView.fxml" , "#000000", "#ffffff");
+
     }
 }

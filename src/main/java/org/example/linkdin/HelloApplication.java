@@ -63,6 +63,12 @@ public class HelloApplication extends Application {
             stg.setScene(new Scene((new FXMLLoader(HelloApplication.class.getResource("ChatRoom.fxml"))).load()));
         else if (x == 15)
             stg.setScene(new Scene((new FXMLLoader(HelloApplication.class.getResource("ShowProfile.fxml"))).load()));
+        else if (x == 16)
+            stg.setScene(new Scene((new FXMLLoader(HelloApplication.class.getResource("Home2.fxml"))).load()));
+        else if (x == 17)
+            stg.setScene(new Scene((new FXMLLoader(HelloApplication.class.getResource("CommentView.fxml"))).load()));
+        else if (x == 18)
+            stg.setScene(new Scene((new FXMLLoader(HelloApplication.class.getResource("LikeView.fxml"))).load()));
 
     }
 
