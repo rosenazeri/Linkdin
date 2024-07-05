@@ -103,11 +103,19 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </HBox.margin>
                                           </Button>
-                                          <TextField fx:id="comment" alignment="CENTER" onAction="#commentHandler" prefHeight="26.0" prefWidth="352.0" promptText="Comment">
+                                          <TextField fx:id="comment" alignment="CENTER" onAction="#commentHandler" prefHeight="26.0" prefWidth="290.0" promptText="Comment">
                                              <HBox.margin>
                                                 <Insets left="10.0" top="10.0" />
                                              </HBox.margin>
                                           </TextField>
+                                          <Button fx:id="SendBTN" mnemonicParsing="false" onAction="#SendHandler" prefHeight="23.0" prefWidth="51.0" text="Send" textFill="#1e00ff">
+                                             <font>
+                                                <Font name="Lucida Bright" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="13.0" />
+                                             </HBox.margin>
+                                          </Button>
                                           <Button fx:id="showCM" mnemonicParsing="false" onAction="#showCommentHandler" prefHeight="23.0" prefWidth="116.0" text="Show Comments" textFill="#1e00ff">
                                              <font>
                                                 <Font name="Lucida Bright" size="12.0" />

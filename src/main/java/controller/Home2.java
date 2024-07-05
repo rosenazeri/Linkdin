@@ -147,4 +147,7 @@ public class Home2 {
             e.printStackTrace();
         }
     }
+
+    public void SendHandler(ActionEvent actionEvent) {
+    }
 }
