@@ -57,13 +57,8 @@ public class SignInController {
         HelloApplication m = new HelloApplication();
         try {
             m.changeScene(1);
-            clear();
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-    private void clear() {
-        emailField.setText("");
-        passwordField.setText("");
     }
 }

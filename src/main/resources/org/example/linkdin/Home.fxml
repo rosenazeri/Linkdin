@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720" prefWidth="1280" style="-fx-background-color: #bfb8ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home">
+<AnchorPane prefHeight="720" prefWidth="1280" style="-fx-background-color: #03001b;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home">
     <children>
         <TabPane layoutY="91.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="698.0" prefWidth="1280" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMinHeight="50.0" tabMinWidth="194.4">
             <tabs>
