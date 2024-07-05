@@ -150,4 +150,7 @@ public class Home2 {
 
     public void SendHandler(ActionEvent actionEvent) {
     }
+
+    public void NextPostHandler(ActionEvent actionEvent) {
+    }
 }
